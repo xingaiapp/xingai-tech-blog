@@ -8,6 +8,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-05-12 | [Hosting an AI Side Project for $0: How We Picked Fly.io for V1](posts/2026-05-12-v1-hosting-fly-io.md) | Invest AI | `deployment` `fly-io` `vercel` `cost-optimization` |
 | 2026-05-12 | [The Monitor That Wouldn't Stop Refreshing — A React Effect Loop Postmortem](posts/2026-05-12-monitor-render-loop.md) | Invest AI | `react` `hooks` `useeffect` `bugfix` `postmortem` |
 | 2026-05-12 | [Three-Layer AI Architecture for Investment Decisions](posts/2026-05-12-three-layer-ai-architecture.md) | Invest AI | `architecture` `gemini` `openai` `hybrid-ai` |
 | 2026-05-12 | [Why We Chose a Hybrid LLM Pipeline](posts/2026-05-12-hybrid-llm-pipeline.md) | Invest AI | `llm` `pipeline` `gemini` `openai` `cost` |
