@@ -1,0 +1,9 @@
+# Local-only working drafts and social-media derivatives
+# (the public artifact lives in /posts; social/ is private staging)
+social/
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
