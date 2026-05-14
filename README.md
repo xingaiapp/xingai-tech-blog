@@ -8,6 +8,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-05-14 | [Vercel Git Auto-Deploy Is Not Limited to Public Repositories](posts/2026-05-14-vercel-private-repos-git-auto-deploy.md) | Platform | `vercel` `github` `deployment` `private-repository` `devops` |
 | 2026-05-13 | [Shipping Invest AI V1: Runbook Thinking for Fly.io + Vercel](posts/2026-05-13-production-runbook-fly-vercel.md) | Invest AI | `deployment` `fly-io` `vercel` `devops` `runbook` |
 | 2026-05-13 | [Treating LLM Output Like Cache Rows (Planned): Worker-Owned Inference](posts/2026-05-13-llm-cached-resource-planned.md) | Invest AI | `architecture` `worker` `sqlite` `openai` `roadmap` |
 | 2026-05-13 | [Four Runtimes, One Repo: Why We Skipped Nx (For Now)](posts/2026-05-13-four-apps-one-repo.md) | Invest AI | `monorepo` `nextjs` `fastapi` `developer-experience` |
