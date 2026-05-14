@@ -8,6 +8,13 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-05-13 | [Shipping Invest AI V1: Runbook Thinking for Fly.io + Vercel](posts/2026-05-13-production-runbook-fly-vercel.md) | Invest AI | `deployment` `fly-io` `vercel` `devops` `runbook` |
+| 2026-05-13 | [Treating LLM Output Like Cache Rows (Planned): Worker-Owned Inference](posts/2026-05-13-llm-cached-resource-planned.md) | Invest AI | `architecture` `worker` `sqlite` `openai` `roadmap` |
+| 2026-05-13 | [Four Runtimes, One Repo: Why We Skipped Nx (For Now)](posts/2026-05-13-four-apps-one-repo.md) | Invest AI | `monorepo` `nextjs` `fastapi` `developer-experience` |
+| 2026-05-13 | [CQRS with SQLite: One Writer, Many Readers, No Drama](posts/2026-05-13-cqrs-sqlite-worker-writes.md) | Invest AI | `cqrs` `sqlite` `worker` `fastapi` `cache` |
+| 2026-05-13 | [Why We Flipped V1 Routing to OpenAI-First (and What Comes Next)](posts/2026-05-13-openai-first-llm-routing.md) | Invest AI | `llm` `openai` `gemini` `ollama` `routing` |
+| 2026-05-13 | [Capping Free-Tier AI Calls Without Slowing Down Development](posts/2026-05-13-free-tier-ai-rate-limits.md) | Invest AI | `rate-limiting` `sqlite` `cost-control` `openai` |
+| 2026-05-13 | [Five Layers of “Not Investment Advice” for an AI Finance Product](posts/2026-05-13-legal-disclaimers-five-layers.md) | Invest AI | `legal` `disclaimers` `product` `compliance` |
 | 2026-05-12 | [Hosting an AI Side Project for $0: How We Picked Fly.io for V1](posts/2026-05-12-v1-hosting-fly-io.md) | Invest AI | `deployment` `fly-io` `vercel` `cost-optimization` |
 | 2026-05-12 | [The Monitor That Wouldn't Stop Refreshing — A React Effect Loop Postmortem](posts/2026-05-12-monitor-render-loop.md) | Invest AI | `react` `hooks` `useeffect` `bugfix` `postmortem` |
 | 2026-05-12 | [Three-Layer AI Architecture for Investment Decisions](posts/2026-05-12-three-layer-ai-architecture.md) | Invest AI | `architecture` `gemini` `openai` `hybrid-ai` |
