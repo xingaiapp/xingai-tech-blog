@@ -21,6 +21,12 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 | 2026-05-12 | [Why We Chose a Hybrid LLM Pipeline](posts/2026-05-12-hybrid-llm-pipeline.md) | Invest AI | `llm` `pipeline` `gemini` `openai` `cost` |
 | 2026-05-12 | [MCP Phased Rollout: From Dashboard to Autonomous Trading](posts/2026-05-12-mcp-phased-rollout.md) | Invest AI | `mcp` `broker` `architecture` `roadmap` |
 
+## Backlog (posts & ADRs not yet written)
+
+Invest AI has broad **May 2026** coverage for ADRs **001–011**. The living **gap matrix** (missing ADR-012, blog placeholders for Meal Coach / dot-app / ops-status, backend ADR-0017, etc.) is maintained in the Invest AI repo: **[`xingai-invest-ai/docs/content-backlog.md`](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/content-backlog.md)** (clone path: `../xingai-invest-ai/docs/content-backlog.md`).
+
+**Still open for future posts:** Meal Coach AI, xingai-dot-app, xingai-ops-status, and other products in the diagram — plus “shipped” stories when **ADR-002 / 003 / 010** move from planned to implemented.
+
 ## XingAI Products
 
 These posts cover engineering across all XingAI products:
