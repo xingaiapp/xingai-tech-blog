@@ -8,6 +8,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-05-14 | [Splitting the Paper Lab: Why InvestSim Lives in Its Own Repo](posts/2026-05-14-invest-performance-sim-paper-lab-own-repo.md) | InvestSim | `nextjs` `prisma` `sqlite` `paper-trading` `invest-ai` `architecture` `vercel` |
 | 2026-05-14 | [Vercel Git Auto-Deploy Is Not Limited to Public Repositories](posts/2026-05-14-vercel-private-repos-git-auto-deploy.md) | Platform | `vercel` `github` `deployment` `private-repository` `devops` |
 | 2026-05-13 | [Shipping Invest AI V1: Runbook Thinking for Fly.io + Vercel](posts/2026-05-13-production-runbook-fly-vercel.md) | Invest AI | `deployment` `fly-io` `vercel` `devops` `runbook` |
 | 2026-05-13 | [Treating LLM Output Like Cache Rows (Planned): Worker-Owned Inference](posts/2026-05-13-llm-cached-resource-planned.md) | Invest AI | `architecture` `worker` `sqlite` `openai` `roadmap` |
@@ -26,7 +27,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 Invest AI has broad **May 2026** coverage for ADRs **001–011**. The living **gap matrix** (missing ADR-012, blog placeholders for Meal Coach / dot-app / ops-status, backend ADR-0017, etc.) is maintained in the Invest AI repo: **[`xingai-invest-ai/docs/content-backlog.md`](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/content-backlog.md)** (clone path: `../xingai-invest-ai/docs/content-backlog.md`).
 
-**Still open for future posts:** Meal Coach AI, xingai-dot-app, xingai-ops-status, and other products in the diagram — plus “shipped” stories when **ADR-002 / 003 / 010** move from planned to implemented.
+**Still open for future posts:** Meal Coach AI, xingai-dot-app, xingai-ops-status, and other products in the diagram — plus “shipped” stories when **ADR-002 / 003 / 010** move from planned to implemented. **InvestSim** now has an inaugural post (2026-05-14); follow-on posts expected for **rules engine** and **hosted SQL** migration.
 
 ## XingAI Products
 
@@ -36,12 +37,14 @@ These posts cover engineering across all XingAI products:
 graph LR
     BLOG["XingAI Tech Blog"]
     BLOG --> INVEST["Invest AI<br/>Finance · Market Data · LLM Pipeline"]
+    BLOG --> INVESTSIM["InvestSim<br/>Paper lab · Ledger · Curve"]
     BLOG --> MEAL["Meal Coach<br/>Health AI · Nutrition"]
     BLOG --> COOK["Cook AI<br/>Recipe Generation"]
     BLOG --> OUTFIT["Outfit AI<br/>Style Decisions"]
     BLOG --> ROUTINE["Routine AI<br/>Habit Building"]
     BLOG --> PARENT["Parent AI<br/>Family Support"]
     BLOG --> TRAVEL["Travel AI<br/>Trip Planning"]
+    INVESTSIM -.->|"HTTPS ingest"| INVEST
 ```
 
 ## About
