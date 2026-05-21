@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Prompt Engineer vs Context Engineer vs Harness Engineer</title>
+  <desc id="desc">A technical UX diagram comparing prompt engineering, context engineering, and harness engineering across instruction quality, information quality, and operational quality.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06111f"/>
+      <stop offset="46%" stop-color="#0a1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="prompt" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="context" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="harness" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .title { font: 800 56px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: -1.4px; }
+      .subtitle { font: 500 23px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #94a3b8; }
+      .kicker { font: 800 17px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #93c5fd; letter-spacing: 3px; }
+      .cardTitle { font: 800 32px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; }
+      .cardSub { font: 650 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; }
+      .label { font: 800 14px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e2e8f0; letter-spacing: 1.5px; }
+      .body { font: 500 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; }
+      .small { font: 500 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #94a3b8; }
+      .chipText { font: 800 14px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: 1px; }
+      .flowTitle { font: 800 20px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e2e8f0; }
+      .flowSmall { font: 600 14px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #94a3b8; }
+      .footer { font: 600 17px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="142" cy="118" r="210" fill="#1d4ed8" opacity="0.13"/>
+  <circle cx="1456" cy="228" r="260" fill="#10b981" opacity="0.10"/>
+  <circle cx="1260" cy="904" r="270" fill="#f59e0b" opacity="0.10"/>
+  <path d="M0 760 C310 690 520 850 800 770 C1050 700 1290 705 1600 635 L1600 1000 L0 1000 Z" fill="#0f172a" opacity="0.72"/>
+
+  <text x="80" y="96" class="kicker">XINGAI TECH BLOG</text>
+  <text x="80" y="166" class="title">Prompt Engineer vs Context Engineer vs Harness Engineer</text>
+  <text x="82" y="210" class="subtitle">Three layers of modern AI product engineering: instruction quality, information quality, operational quality.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="270" width="455" height="430" rx="28" fill="#0f172a" stroke="#1e3a8a" stroke-width="2"/>
+    <rect x="80" y="270" width="455" height="12" rx="6" fill="url(#prompt)"/>
+    <circle cx="130" cy="336" r="24" fill="url(#prompt)"/>
+    <text x="130" y="344" text-anchor="middle" class="chipText">P</text>
+    <text x="170" y="346" class="cardTitle">Prompt Engineer</text>
+    <text x="170" y="382" class="cardSub">Instruction layer</text>
+
+    <text x="116" y="443" class="label">CORE QUESTION</text>
+    <text x="116" y="476" class="body">How should the model think,</text>
+    <text x="116" y="503" class="body">respond, and format output?</text>
+
+    <text x="116" y="564" class="label">MAIN ARTIFACTS</text>
+    <text x="116" y="597" class="body">System prompt · examples</text>
+    <text x="116" y="624" class="body">Output schema · tone rules</text>
+
+    <text x="116" y="667" class="small">Failure mode: the model misunderstands the task.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="572" y="270" width="455" height="430" rx="28" fill="#0f172a" stroke="#065f46" stroke-width="2"/>
+    <rect x="572" y="270" width="455" height="12" rx="6" fill="url(#context)"/>
+    <circle cx="622" cy="336" r="24" fill="url(#context)"/>
+    <text x="622" y="344" text-anchor="middle" class="chipText">C</text>
+    <text x="662" y="346" class="cardTitle">Context Engineer</text>
+    <text x="662" y="382" class="cardSub">Information layer</text>
+
+    <text x="608" y="443" class="label">CORE QUESTION</text>
+    <text x="608" y="476" class="body">What should the model know</text>
+    <text x="608" y="503" class="body">right now?</text>
+
+    <text x="608" y="564" class="label">MAIN ARTIFACTS</text>
+    <text x="608" y="597" class="body">Retrieval · memory · state</text>
+    <text x="608" y="624" class="body">Freshness · tool context</text>
+
+    <text x="608" y="667" class="small">Failure mode: the model sees the wrong facts.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1065" y="270" width="455" height="430" rx="28" fill="#0f172a" stroke="#92400e" stroke-width="2"/>
+    <rect x="1065" y="270" width="455" height="12" rx="6" fill="url(#harness)"/>
+    <circle cx="1115" cy="336" r="24" fill="url(#harness)"/>
+    <text x="1115" y="344" text-anchor="middle" class="chipText">H</text>
+    <text x="1155" y="346" class="cardTitle">Harness Engineer</text>
+    <text x="1155" y="382" class="cardSub">Execution layer</text>
+
+    <text x="1101" y="443" class="label">CORE QUESTION</text>
+    <text x="1101" y="476" class="body">How do we run, test,</text>
+    <text x="1101" y="503" class="body">replay, and trust it?</text>
+
+    <text x="1101" y="564" class="label">MAIN ARTIFACTS</text>
+    <text x="1101" y="597" class="body">Eval harness · replay logs</text>
+    <text x="1101" y="624" class="body">Tool sandbox · CI checks</text>
+
+    <text x="1101" y="667" class="small">Failure mode: the product cannot be debugged.</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="748" width="1440" height="152" rx="28" fill="#020617" stroke="#334155" stroke-width="2"/>
+    <text x="116" y="796" class="label">ONE PRODUCTION LOOP</text>
+
+    <g>
+      <rect x="116" y="825" width="182" height="44" rx="22" fill="#172554" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="207" y="853" text-anchor="middle" class="flowTitle">User request</text>
+    </g>
+    <path d="M312 847 H392" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M392 847 l-13 -8 v16 z" fill="#64748b"/>
+
+    <g>
+      <rect x="410" y="812" width="246" height="70" rx="22" fill="#052e2b" stroke="#34d399" stroke-width="1.5"/>
+      <text x="533" y="842" text-anchor="middle" class="flowTitle">Context pack</text>
+      <text x="533" y="865" text-anchor="middle" class="flowSmall">facts · memory · tools</text>
+    </g>
+    <path d="M672 847 H752" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M752 847 l-13 -8 v16 z" fill="#64748b"/>
+
+    <g>
+      <rect x="770" y="812" width="246" height="70" rx="22" fill="#172554" stroke="#60a5fa" stroke-width="1.5"/>
+      <text x="893" y="842" text-anchor="middle" class="flowTitle">Prompt contract</text>
+      <text x="893" y="865" text-anchor="middle" class="flowSmall">task · rules · schema</text>
+    </g>
+    <path d="M1032 847 H1112" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1112 847 l-13 -8 v16 z" fill="#64748b"/>
+
+    <g>
+      <rect x="1130" y="812" width="246" height="70" rx="22" fill="#431407" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="1253" y="842" text-anchor="middle" class="flowTitle">Harness checks</text>
+      <text x="1253" y="865" text-anchor="middle" class="flowSmall">validate · log · replay</text>
+    </g>
+    <path d="M1392 847 H1452" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1452 847 l-13 -8 v16 z" fill="#64748b"/>
+    <text x="1486" y="853" text-anchor="middle" class="flowTitle">UX</text>
+  </g>
+
+  <text x="80" y="952" class="footer">Takeaway: prompts shape behavior, context grounds facts, harnesses make AI systems shippable.</text>
+  <text x="1520" y="952" text-anchor="end" class="footer">xingai.app · May 2026</text>
+</svg>

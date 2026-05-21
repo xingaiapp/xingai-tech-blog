@@ -8,6 +8,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-05-15 | [InvestSim Becomes a Live Paper Engine](posts/2026-05-15-investsim-live-paper-engine.md) | InvestSim | `paper-trading` `turso` `vercel-cron` `invest-ai` `simulation` `adr` |
 | 2026-05-14 | [Splitting the Paper Lab: Why InvestSim Lives in Its Own Repo](posts/2026-05-14-invest-performance-sim-paper-lab-own-repo.md) | InvestSim | `nextjs` `prisma` `sqlite` `paper-trading` `invest-ai` `architecture` `vercel` |
 | 2026-05-14 | [Vercel Git Auto-Deploy Is Not Limited to Public Repositories](posts/2026-05-14-vercel-private-repos-git-auto-deploy.md) | Platform | `vercel` `github` `deployment` `private-repository` `devops` |
 | 2026-05-13 | [Shipping Invest AI V1: Runbook Thinking for Fly.io + Vercel](posts/2026-05-13-production-runbook-fly-vercel.md) | Invest AI | `deployment` `fly-io` `vercel` `devops` `runbook` |
@@ -27,7 +28,9 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 Invest AI has broad **May 2026** coverage for ADRs **001–011**. The living **gap matrix** (missing ADR-012, blog placeholders for Meal Coach / dot-app / ops-status, backend ADR-0017, etc.) is maintained in the Invest AI repo: **[`xingai-invest-ai/docs/content-backlog.md`](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/content-backlog.md)** (clone path: `../xingai-invest-ai/docs/content-backlog.md`).
 
-**Still open for future posts:** Meal Coach AI, xingai-dot-app, xingai-ops-status, and other products in the diagram — plus “shipped” stories when **ADR-002 / 003 / 010** move from planned to implemented. **InvestSim** now has an inaugural post (2026-05-14); follow-on posts expected for **rules engine** and **hosted SQL** migration.
+**Still open for future posts:** Meal Coach AI, xingai-dot-app, xingai-ops-status, and other products in the diagram — plus “shipped” stories when **ADR-002 / 003 / 010** move from planned to implemented. **InvestSim:** split-repo (2026-05-14) + live paper engine (2026-05-15). Next posts: multi-strategy lab, Turso bootstrap ops story.
+
+**Positioning guide:** [docs/POSITIONING.md](docs/POSITIONING.md) — flagship **Invest AI** vs **InvestSim** paper lab; avoid “AI stock analyzer / trading tool”.
 
 ## XingAI Products
 
@@ -36,8 +39,8 @@ These posts cover engineering across all XingAI products:
 ```mermaid
 graph LR
     BLOG["XingAI Tech Blog"]
-    BLOG --> INVEST["Invest AI<br/>Finance · Market Data · LLM Pipeline"]
-    BLOG --> INVESTSIM["InvestSim<br/>Paper lab · Ledger · Curve"]
+    BLOG --> INVEST["Invest AI<br/>Flagship · Decision system"]
+    BLOG --> INVESTSIM["InvestSim<br/>Paper lab · Not flagship"]
     BLOG --> MEAL["Meal Coach<br/>Health AI · Nutrition"]
     BLOG --> COOK["Cook AI<br/>Recipe Generation"]
     BLOG --> OUTFIT["Outfit AI<br/>Style Decisions"]
@@ -50,6 +53,8 @@ graph LR
 ## About
 
 XingAI builds AI products that help people make better decisions — in health, finance, style, and daily life. Each product is a focused tool, not a chatbot.
+
+**Investment vertical:** XingAI is an **AI-powered investment decision system**. **Flagship product:** Invest AI. **InvestSim** is the **AI paper trading lab** (simulation only). See [docs/POSITIONING.md](docs/POSITIONING.md).
 
 We publish technical writing here to share what we learn: architecture trade-offs, model selection, cost optimization, and the engineering behind real AI products.
 

@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">AI Product Stack: Behavior, Reality, Decision, Trust</title>
+  <desc id="desc">A four-layer AI product engineering diagram showing prompt, context, decision, and harness layers with a production loop.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="44%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="behavior" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="reality" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="decision" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="trust" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="shadow" x="-22%" y="-22%" width="144%" height="144%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.34"/>
+    </filter>
+    <style>
+      .kicker { font: 800 17px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #93c5fd; letter-spacing: 3px; }
+      .title { font: 850 54px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: -1.4px; }
+      .subtitle { font: 540 22px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #a8b3c4; }
+      .layerNo { font: 900 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #020617; letter-spacing: .5px; }
+      .layerName { font: 850 29px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: -.4px; }
+      .layerRole { font: 740 19px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; }
+      .label { font: 850 13px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e2e8f0; letter-spacing: 1.8px; }
+      .body { font: 560 17px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #cbd5e1; }
+      .small { font: 560 14px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #94a3b8; }
+      .flowTitle { font: 850 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; }
+      .flowSmall { font: 650 13px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #a8b3c4; }
+      .quote { font: 800 30px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #f8fafc; letter-spacing: -.4px; }
+      .footer { font: 620 16px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #94a3b8; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <circle cx="116" cy="126" r="220" fill="#1d4ed8" opacity=".13"/>
+  <circle cx="1468" cy="198" r="260" fill="#10b981" opacity=".10"/>
+  <circle cx="1094" cy="938" r="300" fill="#7c3aed" opacity=".10"/>
+  <path d="M0 756 C260 692 520 828 820 748 C1096 674 1320 706 1600 626 L1600 1000 L0 1000 Z" fill="#0f172a" opacity=".74"/>
+
+  <text x="80" y="94" class="kicker">XINGAI TECH BLOG · LINKEDIN VISUAL</text>
+  <text x="80" y="160" class="title">AI Product Stack: Behavior → Reality → Decision → Trust</text>
+  <text x="82" y="204" class="subtitle">Prompt engineering is only one layer. Real AI decision systems need constructed reality, explicit decision logic, and a trust harness.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="266" width="340" height="408" rx="26" fill="#0f172a" stroke="#1d4ed8" stroke-width="2"/>
+    <rect x="72" y="266" width="340" height="11" rx="5.5" fill="url(#behavior)"/>
+    <circle cx="120" cy="328" r="24" fill="url(#behavior)"/>
+    <text x="120" y="334" text-anchor="middle" class="layerNo">1</text>
+    <text x="158" y="328" class="layerName">Prompt</text>
+    <text x="158" y="361" class="layerRole">Behavior Layer</text>
+    <text x="106" y="424" class="label">CONTROLS</text>
+    <text x="106" y="456" class="body">How the model responds</text>
+    <text x="106" y="483" class="body">tone · format · rules</text>
+    <text x="106" y="543" class="label">ARTIFACTS</text>
+    <text x="106" y="575" class="body">System prompt</text>
+    <text x="106" y="602" class="body">Examples · output contract</text>
+    <text x="106" y="642" class="small">Failure: wrong behavior</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="448" y="266" width="340" height="408" rx="26" fill="#0f172a" stroke="#047857" stroke-width="2"/>
+    <rect x="448" y="266" width="340" height="11" rx="5.5" fill="url(#reality)"/>
+    <circle cx="496" cy="328" r="24" fill="url(#reality)"/>
+    <text x="496" y="334" text-anchor="middle" class="layerNo">2</text>
+    <text x="534" y="328" class="layerName">Context</text>
+    <text x="534" y="361" class="layerRole">Reality Layer</text>
+    <text x="482" y="424" class="label">CONTROLS</text>
+    <text x="482" y="456" class="body">What the model believes</text>
+    <text x="482" y="483" class="body">is true right now</text>
+    <text x="482" y="543" class="label">ARTIFACTS</text>
+    <text x="482" y="575" class="body">Selection · ranking</text>
+    <text x="482" y="602" class="body">Compression · trust score</text>
+    <text x="482" y="642" class="small">Failure: wrong reality</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="824" y="266" width="340" height="408" rx="26" fill="#0f172a" stroke="#6d28d9" stroke-width="2"/>
+    <rect x="824" y="266" width="340" height="11" rx="5.5" fill="url(#decision)"/>
+    <circle cx="872" cy="328" r="24" fill="url(#decision)"/>
+    <text x="872" y="334" text-anchor="middle" class="layerNo">3</text>
+    <text x="910" y="328" class="layerName">Decision</text>
+    <text x="910" y="361" class="layerRole">Reasoning + Action</text>
+    <text x="858" y="424" class="label">CONTROLS</text>
+    <text x="858" y="456" class="body">What the system decides</text>
+    <text x="858" y="483" class="body">and what it refuses to do</text>
+    <text x="858" y="543" class="label">ARTIFACTS</text>
+    <text x="858" y="575" class="body">Signals · risk budget</text>
+    <text x="858" y="602" class="body">Policy · position sizing</text>
+    <text x="858" y="642" class="small">Failure: wrong action</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1200" y="266" width="340" height="408" rx="26" fill="#0f172a" stroke="#c2410c" stroke-width="2"/>
+    <rect x="1200" y="266" width="340" height="11" rx="5.5" fill="url(#trust)"/>
+    <circle cx="1248" cy="328" r="24" fill="url(#trust)"/>
+    <text x="1248" y="334" text-anchor="middle" class="layerNo">4</text>
+    <text x="1286" y="328" class="layerName">Harness</text>
+    <text x="1286" y="361" class="layerRole">Trust Layer</text>
+    <text x="1234" y="424" class="label">CONTROLS</text>
+    <text x="1234" y="456" class="body">Can we test, replay,</text>
+    <text x="1234" y="483" class="body">guard, and ship it?</text>
+    <text x="1234" y="543" class="label">ARTIFACTS</text>
+    <text x="1234" y="575" class="body">Evals · risk gates</text>
+    <text x="1234" y="602" class="body">Fallbacks · replay logs</text>
+    <text x="1234" y="642" class="small">Failure: no trust</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="724" width="1468" height="162" rx="28" fill="#020617" stroke="#334155" stroke-width="2"/>
+    <text x="112" y="773" class="label">PRODUCTION LOOP FOR AN AI DECISION SYSTEM</text>
+
+    <g>
+      <rect x="112" y="806" width="172" height="48" rx="24" fill="#172554" stroke="#38bdf8" stroke-width="1.6"/>
+      <text x="198" y="836" text-anchor="middle" class="flowTitle">User request</text>
+    </g>
+    <path d="M300 830 H354" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M354 830 l-13 -8 v16 z" fill="#64748b"/>
+
+    <g>
+      <rect x="372" y="792" width="218" height="76" rx="24" fill="#052e2b" stroke="#34d399" stroke-width="1.6"/>
+      <text x="481" y="824" text-anchor="middle" class="flowTitle">Context pack</text>
+      <text x="481" y="848" text-anchor="middle" class="flowSmall">facts · memory · tools</text>
+    </g>
+    <path d="M606 830 H660" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M660 830 l-13 -8 v16 z" fill="#64748b"/>
+
+    <g>
+      <rect x="678" y="792" width="218" height="76" rx="24" fill="#2e1065" stroke="#a78bfa" stroke-width="1.6"/>
+      <text x="787" y="824" text-anchor="middle" class="flowTitle">Decision engine</text>
+      <text x="787" y="848" text-anchor="middle" class="flowSmall">signals · policy · risk</text>
+    </g>
+    <path d="M912 830 H966" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M966 830 l-13 -8 v16 z" fill="#64748b"/>
+
+    <g>
+      <rect x="984" y="792" width="244" height="76" rx="24" fill="#172554" stroke="#60a5fa" stroke-width="1.6"/>
+      <text x="1106" y="824" text-anchor="middle" class="flowTitle">Explanation prompt</text>
+      <text x="1106" y="848" text-anchor="middle" class="flowSmall">communicate decision</text>
+    </g>
+    <path d="M1244 830 H1298" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1298 830 l-13 -8 v16 z" fill="#64748b"/>
+
+    <g>
+      <rect x="1316" y="792" width="164" height="76" rx="24" fill="#431407" stroke="#f59e0b" stroke-width="1.6"/>
+      <text x="1398" y="824" text-anchor="middle" class="flowTitle">Harness</text>
+      <text x="1398" y="848" text-anchor="middle" class="flowSmall">validate · log</text>
+    </g>
+    <path d="M1496 830 H1532" stroke="#64748b" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1532 830 l-13 -8 v16 z" fill="#64748b"/>
+    <text x="1548" y="837" class="flowTitle">UX</text>
+  </g>
+
+  <text x="80" y="944" class="quote">AI systems fail when reality, reasoning, and trust fall out of sync.</text>
+  <text x="1520" y="944" text-anchor="end" class="footer">xingai.app · May 2026</text>
+</svg>
