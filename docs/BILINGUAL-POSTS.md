@@ -1,51 +1,57 @@
 # Bilingual posts (EN + 中文)
 
-Every new post in `posts/` should ship **English and Simplified Chinese in one file**, unless the piece is English-only by design (e.g. external quote-heavy).
+Every post in `posts/` ships as **two files**: English (`.md`) and Simplified Chinese (`.zh.md`). Same facts in both; cross-linked in the header.
 
-## File layout
+## Naming
+
+| Language | File pattern | Example |
+|----------|--------------|---------|
+| English | `YYYY-MM-DD-slug.md` | `2026-05-30-t-today-guest-access-and-ai-quotas.md` |
+| 中文 | `YYYY-MM-DD-slug.zh.md` | `2026-05-30-t-today-guest-access-and-ai-quotas.zh.md` |
+
+## English file header
 
 ```markdown
 # English title
 
-**Date:** …  
-**Author:** …  
-**Project:** …  
-**Tags:** …  
-**Languages:** English · [中文 ↓](#中文)
+**Date:** …
+**Author:** …
+**Project:** …
+**Tags:** …
+**Also available:** [中文](YYYY-MM-DD-slug.zh.md)
 
----
+## First section
+…
+```
 
-[English sections…]
+## 中文 file header
 
----
+```markdown
+# 中文 · 中文标题
 
-# 中文标题
+**日期：** …（与英文相同）
+**作者：** …
+**项目：** …
+**标签：** …
+**语言：** [English](YYYY-MM-DD-slug.md) · 中文
 
-**日期：** …（与上文相同）  
-**语言：** [English ↑](#english-title-anchor) · 中文
-
----
-
-[中文段落，结构与英文对应…]
+## 第一节
+…
 ```
 
 ## Rules
 
-1. **One file per topic** — do not split `post.en.md` / `post.zh.md` unless we later add a static site generator that needs it.
-2. **Same facts** — numbers, env var names, code paths, and ADR links must match across languages.
+1. **Two files per topic** — keep `slug.md` and `slug.zh.md` in sync in the same PR.
+2. **Same facts** — numbers, env var names, code paths, and ADR links must match.
 3. **Keep proper nouns** — T Today, Invest AI, Vercel, OpenAI, repo names stay as-is.
-4. **Mermaid / code blocks** — usually shared once (English labels OK in both sections, or duplicate diagram with Chinese labels if it helps).
-5. **README index** — list English title; add `· 中文` in the Title column when the file includes a 中文 section.
-
-## Anchor tips (GitHub)
-
-- English H1 becomes the anchor (lowercase, spaces → `-`).
-- Chinese H1: use a short Latin slug if needed, e.g. `# 中文` → `#中文`, or prefix `## 中文版` under a stable `# 中文` heading.
+4. **Mermaid / code blocks** — duplicate in `.zh.md` when Chinese labels help; shared English blocks are OK when neutral.
+5. **README index** — English title links to `.md`; add `· [中文](…zh.md)` in the Title column.
+6. **Cross-links in 中文** — when linking another blog post in the same repo, prefer `./other-post.zh.md` if a 中文 file exists.
 
 ## ADRs (invest-t-advisor)
 
-T Today ADRs use **two files per decision**: `000N-slug.md` (English) and `000N-slug.zh.md` (中文). See [BILINGUAL-ADR.md](https://github.com/xingaiapp/invest-t-advisor/blob/main/docs/adr/BILINGUAL-ADR.md).
+T Today architecture decisions use the same two-file pattern: `000N-slug.md` + `000N-slug.zh.md`. See [BILINGUAL-ADR.md](https://github.com/xingaiapp/invest-t-advisor/blob/main/docs/adr/BILINGUAL-ADR.md).
 
 ## Backlog
 
-All posts under `posts/` as of 2026-05-30 include a 中文 section. New posts should ship bilingual from the first commit.
+All posts under `posts/` as of 2026-05-30 have paired `.zh.md` files. New posts should add English + 中文 together.
