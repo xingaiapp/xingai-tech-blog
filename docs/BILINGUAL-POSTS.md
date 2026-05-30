@@ -48,4 +48,4 @@ T Today ADRs use **two files per decision**: `000N-slug.md` (English) and `000N-
 
 ## Backlog
 
-Older posts are English-only until touched. Priority when editing: product launches, ADR companions, anything linked from `xingai.app`.
+All posts under `posts/` as of 2026-05-30 include a 中文 section. New posts should ship bilingual from the first commit.
