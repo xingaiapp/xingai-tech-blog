@@ -42,6 +42,10 @@ Every new post in `posts/` should ship **English and Simplified Chinese in one f
 - English H1 becomes the anchor (lowercase, spaces → `-`).
 - Chinese H1: use a short Latin slug if needed, e.g. `# 中文` → `#中文`, or prefix `## 中文版` under a stable `# 中文` heading.
 
+## ADRs (invest-t-advisor)
+
+T Today ADRs use **two files per decision**: `000N-slug.md` (English) and `000N-slug.zh.md` (中文). See [BILINGUAL-ADR.md](https://github.com/xingaiapp/invest-t-advisor/blob/main/docs/adr/BILINGUAL-ADR.md).
+
 ## Backlog
 
 Older posts are English-only until touched. Priority when editing: product launches, ADR companions, anything linked from `xingai.app`.
