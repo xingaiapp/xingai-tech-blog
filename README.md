@@ -4,13 +4,15 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 > We build focused AI decision systems for everyday life. This repo documents **how** we build them.
 
+**Bilingual posts:** New articles ship **English + 中文 in one file** ([convention](docs/BILINGUAL-POSTS.md)). Use the **Languages** line at the top of each post to jump between sections.
+
 ## Posts
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
-| 2026-05-30 | [Rules First, AI Second: T Today’s Two-Layer Decision Engine](posts/2026-05-30-t-today-risk-decision-engine.md) | T Today | `architecture` `decision-system` `paper-trading` `openai` `adr` |
-| 2026-05-30 | [When Bilingual JSON Looks Fine in the Network Tab but Empty in the UI](posts/2026-05-30-t-today-bilingual-advisory-json.md) | T Today | `openai` `json` `i18n` `bugfix` `vision` |
-| 2026-05-30 | [Opening T Today to Guests — Three Free AI Runs, No Login Wall](posts/2026-05-30-t-today-guest-access-and-ai-quotas.md) | T Today | `auth` `rate-limiting` `nextjs` `product` |
+| 2026-05-30 | [Rules First, AI Second: T Today’s Two-Layer Decision Engine](posts/2026-05-30-t-today-risk-decision-engine.md) · 中文 | T Today | `architecture` `decision-system` `paper-trading` `openai` `adr` |
+| 2026-05-30 | [When Bilingual JSON Looks Fine in the Network Tab but Empty in the UI](posts/2026-05-30-t-today-bilingual-advisory-json.md) · 中文 | T Today | `openai` `json` `i18n` `bugfix` `vision` |
+| 2026-05-30 | [Opening T Today to Guests — Three Free AI Runs, No Login Wall](posts/2026-05-30-t-today-guest-access-and-ai-quotas.md) · 中文 | T Today | `auth` `rate-limiting` `nextjs` `product` |
 | 2026-05-15 | [InvestSim Becomes a Live Paper Engine](posts/2026-05-15-investsim-live-paper-engine.md) | InvestSim | `paper-trading` `turso` `vercel-cron` `invest-ai` `simulation` `adr` |
 | 2026-05-14 | [Splitting the Paper Lab: Why InvestSim Lives in Its Own Repo](posts/2026-05-14-invest-performance-sim-paper-lab-own-repo.md) | InvestSim | `nextjs` `prisma` `sqlite` `paper-trading` `invest-ai` `architecture` `vercel` |
 | 2026-05-14 | [Vercel Git Auto-Deploy Is Not Limited to Public Repositories](posts/2026-05-14-vercel-private-repos-git-auto-deploy.md) | Platform | `vercel` `github` `deployment` `private-repository` `devops` |
