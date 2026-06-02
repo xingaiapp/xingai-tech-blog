@@ -10,6 +10,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-06-02 | [Prompt Rules That Stop the Model From Guessing Tickers on Blurry Screenshots](posts/2026-06-02-t-today-prompt-honesty-screenshot-vision.md) · [中文](posts/2026-06-02-t-today-prompt-honesty-screenshot-vision.zh.md) | T Today | `openai` `prompt-engineering` `vision` `json` `honesty` |
 | 2026-06-01 | [Two Safety Nets Before Push: Husky pre-push and `npm run check`](posts/2026-06-01-t-today-husky-pre-push-and-check.md) · [中文](posts/2026-06-01-t-today-husky-pre-push-and-check.zh.md) | T Today | `husky` `git-hooks` `typescript` `developer-experience` |
 | 2026-05-31 | [One Foundation Rule for Every XingAI Product: Mobile Chrome, i18n, Legal, SEO, and AEO](posts/2026-05-31-xingai-foundation-mobile-i18n-seo-aeo.md) · [中文](posts/2026-05-31-xingai-foundation-mobile-i18n-seo-aeo.zh.md) | XingAI Platform | `platform` `mobile-first` `i18n` `seo` `aeo` `legal` `cursor` |
 | 2026-05-30 | [Rules First, AI Second: T Today’s Two-Layer Decision Engine](posts/2026-05-30-t-today-risk-decision-engine.md) · [中文](posts/2026-05-30-t-today-risk-decision-engine.zh.md) | T Today | `architecture` `decision-system` `paper-trading` `openai` `adr` |
