@@ -183,6 +183,6 @@ Get Pattern 1 right first. Add Pattern 2 when permissions diverge. Reach for Pat
 
 ---
 
-**Diagram:** [PNG](../assets/MCP-Architecture-Best-Practices.png) · [SVG source](../assets/MCP-Architecture-Best-Practices.svg)
+**Diagram:** [English PNG](../assets/MCP-Architecture-Best-Practices.png) · [中文 PNG](../assets/MCP-Architecture-Best-Practices.zh.png) · [SVG source](../assets/MCP-Architecture-Best-Practices.svg)
 
 *Part of the [XingAI Tech Blog](https://github.com/xingaiapp/xingai-tech-blog). We build focused AI decision systems for everyday life.*
