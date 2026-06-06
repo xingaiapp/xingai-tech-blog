@@ -8,6 +8,8 @@
 
 ---
 
+![Research AI Google OAuth 登录流程](../assets/research-ai-google-oauth-flow.zh.svg)
+
 Research AI 允许游客免费使用已缓存的学习主题。Gmail 登录后，可以解锁不限次数的实时 AI research。
 
 在 UI 上，这只是一个按钮：**Sign in with Google**。但在系统里，至少有四个部分必须对齐：
@@ -249,4 +251,3 @@ Google Cloud redirect URI
 ```
 
 这四件事一致以后，Google 登录就应该变得很无聊。无聊，就是生产系统最好的状态。
-

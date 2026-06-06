@@ -8,6 +8,8 @@
 
 ---
 
+![Research AI Google OAuth flow](../assets/research-ai-google-oauth-flow.svg)
+
 Research AI lets guests use cached learning topics for free. Gmail sign-in unlocks unlimited live AI research.
 
 That sounds simple in the UI: click **Sign in with Google**. Under the hood, four systems must agree on the same OAuth contract:
@@ -249,4 +251,3 @@ Google Cloud redirect URI
 ```
 
 Once those four pieces match, Google sign-in becomes boring. That is the goal.
-
