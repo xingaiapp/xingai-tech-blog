@@ -10,6 +10,9 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-06-06 | [The Learning Decision Boundary: Worker Owns Research AI Verdicts](posts/2026-06-06-research-ai-decision-cache-boundary.md) · [中文](posts/2026-06-06-research-ai-decision-cache-boundary.zh.md) | Research AI | `decision-cache` `worker` `fastapi` `learning` `cqrs` |
+| 2026-06-06 | [One Pipeline, One ROI Number: How Research AI Scores a Topic](posts/2026-06-06-research-ai-learning-roi-pipeline.md) · [中文](posts/2026-06-06-research-ai-learning-roi-pipeline.zh.md) | Research AI | `openai` `worker` `roi` `decision-system` `json` |
+| 2026-06-06 | [Shipping Research AI: Vercel for UI, Fly for Worker + SQLite](posts/2026-06-06-research-ai-fly-vercel-ship.md) · [中文](posts/2026-06-06-research-ai-fly-vercel-ship.zh.md) | Research AI | `fly-io` `vercel` `deployment` `sqlite` `worker` |
 | 2026-06-03 | [MCP Architecture: Connection Patterns and Auth That Hold Up in Production](posts/2026-06-03-mcp-architecture-best-practices.md) · [中文](posts/2026-06-03-mcp-architecture-best-practices.zh.md) | XingAI Platform | `mcp` `architecture` `auth` `oauth` `zero-trust` `agents` |
 | 2026-06-02 | [Prompt Rules That Stop the Model From Guessing Tickers on Blurry Screenshots](posts/2026-06-02-t-today-prompt-honesty-screenshot-vision.md) · [中文](posts/2026-06-02-t-today-prompt-honesty-screenshot-vision.zh.md) | T Today | `openai` `prompt-engineering` `vision` `json` `honesty` |
 | 2026-06-01 | [Two Safety Nets Before Push: Husky pre-push and `npm run check`](posts/2026-06-01-t-today-husky-pre-push-and-check.md) · [中文](posts/2026-06-01-t-today-husky-pre-push-and-check.zh.md) | T Today | `husky` `git-hooks` `typescript` `developer-experience` |
@@ -49,6 +52,7 @@ These posts cover engineering across all XingAI products:
 ```mermaid
 graph LR
     BLOG["XingAI Tech Blog"]
+    BLOG --> RESEARCH["Research AI<br/>Learning decisions"]
     BLOG --> INVEST["Invest AI<br/>Flagship · Decision system"]
     BLOG --> INVESTSIM["InvestSim<br/>Paper lab · Not flagship"]
     BLOG --> MEAL["Meal Coach<br/>Health AI · Nutrition"]
