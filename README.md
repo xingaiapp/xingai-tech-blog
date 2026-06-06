@@ -10,6 +10,12 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-06-07 | [Shipping SEO and AEO on Research AI (Single URL, Three Locales)](posts/2026-06-07-research-ai-seo-aeo-ship.md) · [中文](posts/2026-06-07-research-ai-seo-aeo-ship.zh.md) | Research AI | `seo` `aeo` `llms-txt` `json-ld` `nextjs` |
+| 2026-06-07 | [Four Layers of “Not Professional Advice” for a Learning AI](posts/2026-06-07-research-ai-legal-disclaimer-layers.md) · [中文](posts/2026-06-07-research-ai-legal-disclaimer-layers.zh.md) | Research AI | `legal` `disclaimers` `product` `compliance` `i18n` |
+| 2026-06-07 | [Staged SSE Without Spoilers: Research AI Wait UX](posts/2026-06-07-research-ai-sse-streaming-wait-ux.md) · [中文](posts/2026-06-07-research-ai-sse-streaming-wait-ux.zh.md) | Research AI | `sse` `streaming` `ux` `nextjs` `worker` |
+| 2026-06-07 | [Three Live Runs a Day: Research AI Free Tier on Top of Cache](posts/2026-06-07-research-ai-free-tier-three-live-runs.md) · [中文](posts/2026-06-07-research-ai-free-tier-three-live-runs.zh.md) | Research AI | `rate-limiting` `sqlite` `cost-control` `product` `cache` |
+| 2026-06-07 | [SQLite CQRS for Research AI: Same Keys, Same Fly Volume](posts/2026-06-07-research-ai-sqlite-cqrs-cache.md) · [中文](posts/2026-06-07-research-ai-sqlite-cqrs-cache.zh.md) | Research AI | `cqrs` `sqlite` `worker` `cache` `fly-io` |
+| 2026-06-07 | [Decision Board, Not Chatbot: Why Research AI Ships One Verdict](posts/2026-06-07-research-ai-decision-board-not-chatbot.md) · [中文](posts/2026-06-07-research-ai-decision-board-not-chatbot.zh.md) | Research AI | `decision-system` `product` `learning` `ux` `architecture` |
 | 2026-06-06 | [The Learning Decision Boundary: Worker Owns Research AI Verdicts](posts/2026-06-06-research-ai-decision-cache-boundary.md) · [中文](posts/2026-06-06-research-ai-decision-cache-boundary.zh.md) | Research AI | `decision-cache` `worker` `fastapi` `learning` `cqrs` |
 | 2026-06-06 | [One Pipeline, One ROI Number: How Research AI Scores a Topic](posts/2026-06-06-research-ai-learning-roi-pipeline.md) · [中文](posts/2026-06-06-research-ai-learning-roi-pipeline.zh.md) | Research AI | `openai` `worker` `roi` `decision-system` `json` |
 | 2026-06-06 | [Shipping Research AI: Vercel for UI, Fly for Worker + SQLite](posts/2026-06-06-research-ai-fly-vercel-ship.md) · [中文](posts/2026-06-06-research-ai-fly-vercel-ship.zh.md) | Research AI | `fly-io` `vercel` `deployment` `sqlite` `worker` |
