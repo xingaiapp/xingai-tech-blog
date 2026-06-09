@@ -1,0 +1,34 @@
+---
+description: Public-repo security — never leak credentials, bypass paths, or production auth gaps in tech blog posts
+globs: posts/**/*.md
+alwaysApply: true
+---
+
+# Tech Blog — Public Security
+
+`xingai-tech-blog` is a **public** repository. Treat every post as attacker-readable.
+
+## Before writing or editing posts
+
+Read `docs/PUBLIC-SECURITY.md` and apply its checklist.
+
+## Hard bans in `posts/`
+
+- Real operator emails (`@xingai.app` used for admin/auth/OTP).
+- Secret values, API keys, JWTs, cookie names with bypass semantics.
+- Active auth bypass mechanics: custom headers, `localStorage` keys, env allowlists with real values, UI “skip login” flows.
+- Statements that production auth is missing, broken, or incomplete.
+- Links to product-repo troubleshooting sections that document bypasses.
+
+## Use instead
+
+- `admin@your-domain`, `<FLY_SECRET>`, `<allowlist env var>`.
+- “Interim testing paths live in private runbooks” — no how-to.
+- “We are completing OAuth rollout” — not “OAuth is not configured.”
+- Architecture ADR links without bypass instructions.
+
+## Pre-push grep (review diff)
+
+Search for: `@xingai.app`, `bypass`, `X-Invest`, `V2_ADMIN`, `localStorage`, `sk-`, `secret=`, `not configured`, `lacks full`.
+
+Redact or move sensitive lines to the product repo’s private ops docs.

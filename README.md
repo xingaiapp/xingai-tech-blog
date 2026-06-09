@@ -6,10 +6,14 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 **Bilingual posts:** Each article is **English** (`.md`) + **中文** (`.zh.md`) — [convention](docs/BILINGUAL-POSTS.md).
 
+**Public repo:** Review [docs/PUBLIC-SECURITY.md](docs/PUBLIC-SECURITY.md) before every push — no credentials, bypass paths, or production auth gaps in posts.
+
 ## Posts
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-06-08 | [One Admin, Real Power: Why We’re Skipping SMS and Planning Email OTP](posts/2026-06-08-invest-ai-admin-second-factor-email-otp.md) · [中文](posts/2026-06-08-invest-ai-admin-second-factor-email-otp.zh.md) | Invest AI | `auth` `admin` `otp` `mfa` `security` `design` |
+| 2026-06-08 | [Saved Preferences Are Not Decisions: Tracking Stocks Without Breaking the Worker Boundary](posts/2026-06-08-invest-ai-user-scoped-tracking-worker-stale-ux.md) · [中文](posts/2026-06-08-invest-ai-user-scoped-tracking-worker-stale-ux.zh.md) | Invest AI | `sqlite` `fastapi` `worker-cache` `decision-boundary` |
 | 2026-06-07 | [Shipping SEO and AEO on Research AI (Single URL, Three Locales)](posts/2026-06-07-research-ai-seo-aeo-ship.md) · [中文](posts/2026-06-07-research-ai-seo-aeo-ship.zh.md) | Research AI | `seo` `aeo` `llms-txt` `json-ld` `nextjs` |
 | 2026-06-07 | [Four Layers of “Not Professional Advice” for a Learning AI](posts/2026-06-07-research-ai-legal-disclaimer-layers.md) · [中文](posts/2026-06-07-research-ai-legal-disclaimer-layers.zh.md) | Research AI | `legal` `disclaimers` `product` `compliance` `i18n` |
 | 2026-06-07 | [Staged SSE Without Spoilers: Research AI Wait UX](posts/2026-06-07-research-ai-sse-streaming-wait-ux.md) · [中文](posts/2026-06-07-research-ai-sse-streaming-wait-ux.zh.md) | Research AI | `sse` `streaming` `ux` `nextjs` `worker` |
