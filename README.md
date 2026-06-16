@@ -12,6 +12,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-06-14 | [Cursor Skills vs MCP: Procedure vs Capability](posts/2026-06-14-cursor-skills-vs-mcp-when-to-use-which.md) · [中文](posts/2026-06-14-cursor-skills-vs-mcp-when-to-use-which.zh.md) | XingAI Platform | `cursor` `skills` `mcp` `agents` `ai-engineering` |
 | 2026-06-08 | [One Admin, Real Power: Why We’re Skipping SMS and Planning Email OTP](posts/2026-06-08-invest-ai-admin-second-factor-email-otp.md) · [中文](posts/2026-06-08-invest-ai-admin-second-factor-email-otp.zh.md) | Invest AI | `auth` `admin` `otp` `mfa` `security` `design` |
 | 2026-06-08 | [Saved Preferences Are Not Decisions: Tracking Stocks Without Breaking the Worker Boundary](posts/2026-06-08-invest-ai-user-scoped-tracking-worker-stale-ux.md) · [中文](posts/2026-06-08-invest-ai-user-scoped-tracking-worker-stale-ux.zh.md) | Invest AI | `sqlite` `fastapi` `worker-cache` `decision-boundary` |
 | 2026-06-07 | [Shipping SEO and AEO on Research AI (Single URL, Three Locales)](posts/2026-06-07-research-ai-seo-aeo-ship.md) · [中文](posts/2026-06-07-research-ai-seo-aeo-ship.zh.md) | Research AI | `seo` `aeo` `llms-txt` `json-ld` `nextjs` |
