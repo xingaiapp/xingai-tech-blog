@@ -12,6 +12,9 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-06-25 | [Supervisor + RAG + Citations: Insurance Claims Multi-Agent POC](posts/2026-06-25-claims-multiagent-rag-supervisor-poc.md) · [中文](posts/2026-06-25-claims-multiagent-rag-supervisor-poc.zh.md) | Enterprise AI POCs | `multi-agent` `rag` `langgraph` `human-in-the-loop` `audit` |
+| 2026-06-25 | [Read-First MCP: Robinhood Agentic Trading and ADR-028 Gates](posts/2026-06-25-robinhood-mcp-execution-gates-adr-028.md) · [中文](posts/2026-06-25-robinhood-mcp-execution-gates-adr-028.zh.md) | Invest AI | `mcp` `robinhood` `execution-gates` `human-in-the-loop` |
+| 2026-06-25 | [Two Repos, One Score Contract: ADR-011 + ADR-026](posts/2026-06-25-two-repos-one-score-contract-adr-026.md) · [中文](posts/2026-06-25-two-repos-one-score-contract-adr-026.zh.md) | Invest AI + Decision Engine | `decision-engine` `integration` `cqrs` `adr` |
 | 2026-06-24 | [XingAI Opportunity Radar — June 24: The Agent Stack Converges](posts/2026-06-24-xingai-opportunity-radar-agent-stack.md) · [中文](posts/2026-06-24-xingai-opportunity-radar-agent-stack.zh.md) | XingAI Platform | `opportunity-radar` `agents` `governance` `memory` `product-strategy` |
 | 2026-06-14 | [Cursor Skills vs MCP: Procedure vs Capability](posts/2026-06-14-cursor-skills-vs-mcp-when-to-use-which.md) · [中文](posts/2026-06-14-cursor-skills-vs-mcp-when-to-use-which.zh.md) | XingAI Platform | `cursor` `skills` `mcp` `agents` `ai-engineering` |
 | 2026-06-08 | [One Admin, Real Power: Why We’re Skipping SMS and Planning Email OTP](posts/2026-06-08-invest-ai-admin-second-factor-email-otp.md) · [中文](posts/2026-06-08-invest-ai-admin-second-factor-email-otp.zh.md) | Invest AI | `auth` `admin` `otp` `mfa` `security` `design` |
