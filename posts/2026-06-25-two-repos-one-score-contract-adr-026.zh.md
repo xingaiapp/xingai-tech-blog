@@ -8,7 +8,7 @@
 
 ---
 
-Invest AI 交付带宏观共识的生产 dashboard。Decision Engine 拥有多周期技术打分与回测。**两个仓库是刻意设计** — [Decision Engine ADR-002](https://github.com/xingaiapp/xingai-invest-decision-engine/blob/main/docs/adr/002-sibling-invest-ai.zh.md)、[Invest AI 项目对比](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/project-comparison-invest-ai-vs-decision-assistant.zh.md)。
+Invest AI 交付带宏观共识的生产 dashboard。Decision Engine 拥有多周期技术打分与回测。**两个仓库是刻意设计** — [Decision Engine ADR-002](https://github.com/xingaiapp/xingai-invest-decision-engine/blob/main/docs/adr/002-sibling-invest-ai.zh.md)、[Invest AI 项目对比](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/project-comparison-invest-ai-vs-decision-engine.md)。
 
 集成需要双方可执行的契约。契约即 **`daily_scores.v1.json`**。
 

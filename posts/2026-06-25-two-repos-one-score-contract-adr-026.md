@@ -8,7 +8,7 @@
 
 ---
 
-Invest AI ships a production dashboard with macro consensus. Decision Engine owns multi-timeframe technical scoring and backtests. **Two repos on purpose** — [ADR-002 on the Decision Engine side](https://github.com/xingaiapp/xingai-invest-decision-engine/blob/main/docs/adr/002-sibling-invest-ai.md), [project comparison on Invest AI](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/project-comparison-invest-ai-vs-decision-assistant.md).
+Invest AI ships a production dashboard with macro consensus. Decision Engine owns multi-timeframe technical scoring and backtests. **Two repos on purpose** — [ADR-002 on the Decision Engine side](https://github.com/xingaiapp/xingai-invest-decision-engine/blob/main/docs/adr/002-sibling-invest-ai.md), [project comparison on Invest AI](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/project-comparison-invest-ai-vs-decision-engine.md).
 
 Integration needs a contract both sides can enforce. That contract is **`daily_scores.v1.json`**.
 
