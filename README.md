@@ -12,6 +12,9 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-06-28 | [Two Regimes, One Dashboard: Technical vs Macro (ADR-027)](posts/2026-06-28-dual-regime-technical-vs-macro-adr-027.md) · [中文](posts/2026-06-28-dual-regime-technical-vs-macro-adr-027.zh.md) | Invest AI | `macro-radar` `decision-engine` `regime` `adr` |
+| 2026-06-28 | [Read-Only Broker, Writable Ledger: Decision Engine ADR-014/015](posts/2026-06-28-decision-engine-readonly-broker-decision-ledger.md) · [中文](posts/2026-06-28-decision-engine-readonly-broker-decision-ledger.zh.md) | Decision Engine | `robinhood` `decision-ledger` `human-in-the-loop` |
+| 2026-06-28 | [Scanner Computes, Human Confirms: Polymarket AI](posts/2026-06-28-polymarket-scanner-human-confirm.md) · [中文](posts/2026-06-28-polymarket-scanner-human-confirm.zh.md) | Polymarket AI | `polymarket` `human-in-the-loop` `kelly` |
 | 2026-06-25 | [Supervisor + RAG + Citations: Insurance Claims Multi-Agent POC](posts/2026-06-25-claims-multiagent-rag-supervisor-poc.md) · [中文](posts/2026-06-25-claims-multiagent-rag-supervisor-poc.zh.md) | Enterprise AI POCs | `multi-agent` `rag` `langgraph` `human-in-the-loop` `audit` |
 | 2026-06-25 | [Read-First MCP: Robinhood Agentic Trading and ADR-028 Gates](posts/2026-06-25-robinhood-mcp-execution-gates-adr-028.md) · [中文](posts/2026-06-25-robinhood-mcp-execution-gates-adr-028.zh.md) | Invest AI | `mcp` `robinhood` `execution-gates` `human-in-the-loop` |
 | 2026-06-25 | [Two Repos, One Score Contract: ADR-011 + ADR-026](posts/2026-06-25-two-repos-one-score-contract-adr-026.md) · [中文](posts/2026-06-25-two-repos-one-score-contract-adr-026.zh.md) | Invest AI + Decision Engine | `decision-engine` `integration` `cqrs` `adr` |
