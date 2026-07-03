@@ -12,6 +12,13 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-03 | [Personal Memory Engine: Supabase RLS + FastAPI](posts/2026-07-03-personal-memory-supabase-rls-implementation.md) · [中文](posts/2026-07-03-personal-memory-supabase-rls-implementation.zh.md) | Invest AI | `memory` `supabase` `rls` `fastapi` |
+| 2026-07-03 | [Meal AI: Decision Ledger in Next.js with No Backend](posts/2026-07-03-meal-ai-nextjs-decision-ledger-api-route.md) · [中文](posts/2026-07-03-meal-ai-nextjs-decision-ledger-api-route.zh.md) | Meal Coach AI | `decision-ledger` `nextjs` `meal-ai` |
+| 2026-07-03 | [Newsletter Worker: Opportunity Radar to Resend](posts/2026-07-03-newsletter-worker-radar-to-resend.md) · [中文](posts/2026-07-03-newsletter-worker-radar-to-resend.zh.md) | Opportunity Radar | `newsletter` `resend` `worker` |
+| 2026-07-03 | [Research-to-Startup Agent: Four-Artifact Pipeline](posts/2026-07-03-research-startup-agent-four-artifact-pipeline.md) · [中文](posts/2026-07-03-research-startup-agent-four-artifact-pipeline.zh.md) | Research AI | `agents` `pipeline` `startup` |
+| 2026-07-01 | [XingAI Is Not a Chatbot — It's a Decision Engine](posts/2026-07-01-xingai-decision-engine-not-chatbot.md) · [中文](posts/2026-07-01-xingai-decision-engine-not-chatbot.zh.md) | XingAI Platform | `decision-system` `platform` `positioning` |
+| 2026-07-01 | [Personal Memory Engine: One Profile, Every Product](posts/2026-07-01-personal-memory-engine-cross-product.md) · [中文](posts/2026-07-01-personal-memory-engine-cross-product.zh.md) | XingAI Platform | `memory` `cross-product` `supabase` |
+| 2026-07-01 | [Meal AI: Worker + Cache for Health-Aware Planning](posts/2026-07-01-meal-ai-worker-cache-health-context.md) · [中文](posts/2026-07-01-meal-ai-worker-cache-health-context.zh.md) | Meal Coach AI | `worker` `cache` `meal-ai` `health` |
 | 2026-06-28 | [Two Regimes, One Dashboard: Technical vs Macro (ADR-027)](posts/2026-06-28-dual-regime-technical-vs-macro-adr-027.md) · [中文](posts/2026-06-28-dual-regime-technical-vs-macro-adr-027.zh.md) | Invest AI | `macro-radar` `decision-engine` `regime` `adr` |
 | 2026-06-28 | [Read-Only Broker, Writable Ledger: Decision Engine ADR-014/015](posts/2026-06-28-decision-engine-readonly-broker-decision-ledger.md) · [中文](posts/2026-06-28-decision-engine-readonly-broker-decision-ledger.zh.md) | Decision Engine | `robinhood` `decision-ledger` `human-in-the-loop` |
 | 2026-06-28 | [Scanner Computes, Human Confirms: Polymarket AI](posts/2026-06-28-polymarket-scanner-human-confirm.md) · [中文](posts/2026-06-28-polymarket-scanner-human-confirm.zh.md) | Polymarket AI | `polymarket` `human-in-the-loop` `kelly` |
