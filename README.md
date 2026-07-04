@@ -12,6 +12,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-04 | [Executable Knowledge: Quality Increases Velocity](posts/2026-07-04-executable-knowledge-quality-velocity.md) · [中文](posts/2026-07-04-executable-knowledge-quality-velocity.zh.md) | Enterprise AI Design | `ai-native-engineering` `executable-knowledge` `claude-md` `skills` `mcp` `quality` `velocity` |
 | 2026-07-03 | [Loop Engineering: Why Enterprise AI's Real Asset Is the Runtime](posts/2026-07-03-loop-engineering-enterprise-ai-runtime.md) · [中文](posts/2026-07-03-loop-engineering-enterprise-ai-runtime.zh.md) | Enterprise AI Design | `loop-engineering` `context-engineering` `harness-engineering` `agent-runtime` `enterprise` |
 | 2026-07-03 | [Personal Memory Engine: Supabase RLS + FastAPI](posts/2026-07-03-personal-memory-supabase-rls-implementation.md) · [中文](posts/2026-07-03-personal-memory-supabase-rls-implementation.zh.md) | Invest AI | `memory` `supabase` `rls` `fastapi` |
 | 2026-07-03 | [Meal AI: Decision Ledger in Next.js with No Backend](posts/2026-07-03-meal-ai-nextjs-decision-ledger-api-route.md) · [中文](posts/2026-07-03-meal-ai-nextjs-decision-ledger-api-route.zh.md) | Meal Coach AI | `decision-ledger` `nextjs` `meal-ai` |
