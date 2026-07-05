@@ -12,6 +12,8 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-05 | [Your Coding Agent's Helpfulness Is the Attack Surface](posts/2026-07-05-agent-firewall-helpfulness-attack-surface.md) · [中文](posts/2026-07-05-agent-firewall-helpfulness-attack-surface.zh.md) | Agent Firewall | `agent-security` `prompt-injection` `claude-code` `human-in-the-loop` `decision-ledger` `governance` |
+| 2026-07-05 | [Interview Prep Is a Decision Problem: Learn AI's One-Call Engine Architecture](posts/2026-07-05-learn-ai-one-call-engine-architecture.md) · [中文](posts/2026-07-05-learn-ai-one-call-engine-architecture.zh.md) | Learn AI | `learn-ai` `decision-system` `cache-first` `llm-cost` `engines` `patterns` |
 | 2026-07-04 | [Executable Knowledge: Quality Increases Velocity](posts/2026-07-04-executable-knowledge-quality-velocity.md) · [中文](posts/2026-07-04-executable-knowledge-quality-velocity.zh.md) | Enterprise AI Design | `ai-native-engineering` `executable-knowledge` `claude-md` `skills` `mcp` `quality` `velocity` |
 | 2026-07-03 | [Loop Engineering: Why Enterprise AI's Real Asset Is the Runtime](posts/2026-07-03-loop-engineering-enterprise-ai-runtime.md) · [中文](posts/2026-07-03-loop-engineering-enterprise-ai-runtime.zh.md) | Enterprise AI Design | `loop-engineering` `context-engineering` `harness-engineering` `agent-runtime` `enterprise` |
 | 2026-07-03 | [Personal Memory Engine: Supabase RLS + FastAPI](posts/2026-07-03-personal-memory-supabase-rls-implementation.md) · [中文](posts/2026-07-03-personal-memory-supabase-rls-implementation.zh.md) | Invest AI | `memory` `supabase` `rls` `fastapi` |
