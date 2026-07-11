@@ -54,3 +54,8 @@ One bug the corpus caught immediately: our network-tool regex matched the `ssh` 
 Agent governance is not a feature you bolt on when the enterprise asks. It's the same human-in-the-loop discipline XingAI has applied to trading ([Decision Engine ADR-003](https://github.com/xingaiapp/xingai-invest-decision-engine/blob/main/docs/adr/003-human-in-the-loop.md)), now pointed at the agent itself. The Decision Ledger schema didn't change at all — the firewall is just its third adopter.
 
 Agents will keep getting stronger. The question enterprises will ask is not "how smart is your agent" but "what can it do without asking, who approves the rest, and where's the record." Build the answer before they ask.
+
+## Updates (July 11)
+
+- [Turn-scoped taint / ADR-004](2026-07-11-agent-firewall-origin-provenance-adr-004.md) — `untrusted_origin_instruction` now fires for real.
+- [Deny + add rule / ADR-005](2026-07-11-agent-firewall-deny-add-rule-adr-005.md) — pin instantly, commit YAML later.

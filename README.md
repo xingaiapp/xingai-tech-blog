@@ -12,6 +12,8 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-11 | [Turn-Scoped Taint: Making Untrusted Origin a Real Signal](posts/2026-07-11-agent-firewall-origin-provenance-adr-004.md) · [中文](posts/2026-07-11-agent-firewall-origin-provenance-adr-004.zh.md) | Agent Firewall | `agent-security` `provenance` `claude-code` `prompt-injection` `adr` `governance` |
+| 2026-07-11 | [Deny + Add Rule Without Editing YAML Live](posts/2026-07-11-agent-firewall-deny-add-rule-adr-005.md) · [中文](posts/2026-07-11-agent-firewall-deny-add-rule-adr-005.zh.md) | Agent Firewall | `agent-security` `human-in-the-loop` `policy` `adr` `decision-ledger` `governance` |
 | 2026-07-05 | [Your Coding Agent's Helpfulness Is the Attack Surface](posts/2026-07-05-agent-firewall-helpfulness-attack-surface.md) · [中文](posts/2026-07-05-agent-firewall-helpfulness-attack-surface.zh.md) | Agent Firewall | `agent-security` `prompt-injection` `claude-code` `human-in-the-loop` `decision-ledger` `governance` |
 | 2026-07-05 | [Interview Prep Is a Decision Problem: Learn AI's One-Call Engine Architecture](posts/2026-07-05-learn-ai-one-call-engine-architecture.md) · [中文](posts/2026-07-05-learn-ai-one-call-engine-architecture.zh.md) | Learn AI | `learn-ai` `decision-system` `cache-first` `llm-cost` `engines` `patterns` |
 | 2026-07-04 | [Executable Knowledge: Quality Increases Velocity](posts/2026-07-04-executable-knowledge-quality-velocity.md) · [中文](posts/2026-07-04-executable-knowledge-quality-velocity.zh.md) | Enterprise AI Design | `ai-native-engineering` `executable-knowledge` `claude-md` `skills` `mcp` `quality` `velocity` |

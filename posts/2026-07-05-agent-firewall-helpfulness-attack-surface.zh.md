@@ -54,3 +54,8 @@ exit=2
 Agent 治理不是等企业开口才补的功能。它是 XingAI 在交易场景已经践行的 human-in-the-loop 纪律（[Decision Engine ADR-003](https://github.com/xingaiapp/xingai-invest-decision-engine/blob/main/docs/adr/003-human-in-the-loop.zh.md)），如今对准了 Agent 自身。Decision Ledger schema 一个字段都没改——防火墙只是它的第三个采用者。
 
 Agent 会越来越强。企业将要问的不是"你的 Agent 多聪明"，而是"它不经请示能做什么、剩下的谁批、记录在哪"。在他们开口之前，把答案建好。
+
+## 更新（7 月 11 日）
+
+- [按轮次污染 / ADR-004](2026-07-11-agent-firewall-origin-provenance-adr-004.zh.md) —— `untrusted_origin_instruction` 现在会真正触发。
+- [拒绝并加规则 / ADR-005](2026-07-11-agent-firewall-deny-add-rule-adr-005.zh.md) —— 即时钉死，YAML 事后提交。
