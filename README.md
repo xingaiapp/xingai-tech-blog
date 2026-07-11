@@ -12,6 +12,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-11 | [Shipping the Approval Queue Dashboard (and a TypeScript 7 Wall Nobody Warned Us About)](posts/2026-07-11-agent-firewall-approval-dashboard-ships.md) · [中文](posts/2026-07-11-agent-firewall-approval-dashboard-ships.zh.md) | Agent Firewall | `agent-security` `nextjs` `typescript` `human-in-the-loop` `governance` |
 | 2026-07-11 | [Turn-Scoped Taint: Making Untrusted Origin a Real Signal](posts/2026-07-11-agent-firewall-origin-provenance-adr-004.md) · [中文](posts/2026-07-11-agent-firewall-origin-provenance-adr-004.zh.md) | Agent Firewall | `agent-security` `provenance` `claude-code` `prompt-injection` `adr` `governance` |
 | 2026-07-11 | [Deny + Add Rule Without Editing YAML Live](posts/2026-07-11-agent-firewall-deny-add-rule-adr-005.md) · [中文](posts/2026-07-11-agent-firewall-deny-add-rule-adr-005.zh.md) | Agent Firewall | `agent-security` `human-in-the-loop` `policy` `adr` `decision-ledger` `governance` |
 | 2026-07-05 | [Your Coding Agent's Helpfulness Is the Attack Surface](posts/2026-07-05-agent-firewall-helpfulness-attack-surface.md) · [中文](posts/2026-07-05-agent-firewall-helpfulness-attack-surface.zh.md) | Agent Firewall | `agent-security` `prompt-injection` `claude-code` `human-in-the-loop` `decision-ledger` `governance` |

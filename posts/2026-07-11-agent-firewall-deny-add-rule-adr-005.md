@@ -61,4 +61,5 @@ Config that enforces agent behavior is itself an enforcement surface. Letting th
 - [ADR-005](https://github.com/xingaiapp/xingai-agent-firewall/blob/main/docs/adr/005-deny-add-rule.md) · [中文](https://github.com/xingaiapp/xingai-agent-firewall/blob/main/docs/adr/005-deny-add-rule.zh.md)
 - Prior: [Turn-Scoped Taint (ADR-004)](2026-07-11-agent-firewall-origin-provenance-adr-004.md)
 - Scaffold: [Helpfulness Is the Attack Surface](2026-07-05-agent-firewall-helpfulness-attack-surface.md)
+- Next: [Shipping the Approval Queue Dashboard](2026-07-11-agent-firewall-approval-dashboard-ships.md)
 - Pattern: [`agent-execution-gate`](https://github.com/xingaiapp/xingai-engineering-system/blob/main/patterns/agent-execution-gate.md)

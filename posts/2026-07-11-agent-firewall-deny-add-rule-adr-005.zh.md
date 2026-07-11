@@ -61,4 +61,5 @@ python cli.py resolve-suggestion <id>
 - [ADR-005](https://github.com/xingaiapp/xingai-agent-firewall/blob/main/docs/adr/005-deny-add-rule.zh.md) · [English](https://github.com/xingaiapp/xingai-agent-firewall/blob/main/docs/adr/005-deny-add-rule.md)
 - 上一篇：[按轮次污染（ADR-004）](2026-07-11-agent-firewall-origin-provenance-adr-004.zh.md)
 - 脚手架篇：[乐于助人就是攻击面](2026-07-05-agent-firewall-helpfulness-attack-surface.zh.md)
+- 下一篇：[上线审批队列看板](2026-07-11-agent-firewall-approval-dashboard-ships.zh.md)
 - 模式：[`agent-execution-gate`](https://github.com/xingaiapp/xingai-engineering-system/blob/main/patterns/agent-execution-gate.md)
