@@ -39,10 +39,25 @@ place_equity_order、cancel_equity_order            → 先过 G1-G7，也许才
 
 全部 24 个测试都是对着 `gateway/mock_upstream.py` 跑的——一个假的 Robinhood MCP 服务器，假账户假订单，集成测试里是真的起了一个子进程。这个仓库的测试套件里没有任何代码碰过 `https://agent.robinhood.com`，也没碰过任何真实 OAuth 凭证。把网关指向真实端点，是操作者自己后续要做的、独立的决定——这里既没有验证过，也不暗示这样做是安全的。
 
+## 更新（同一天）：四道 fail-closed 门里，两道接通了
+
+上面写的是网关今天早上刚上线时的状态。到今天结束前，又有两道门从 fail-closed 变成真的了：
+
+- **G3（数据新鲜度）**——[ADR-002](https://github.com/xingaiapp/xingai-robinhood-mcp/blob/main/docs/adr/002-g3-data-freshness-wired.zh.md)。发现 Invest AI 的新鲜度端点（`GET /api/v2/system/data-freshness`）其实在这个网关写出来**之前**就已经存在了——上面"需要 Invest AI 基础设施"的说法只对了一半。工作量全在本仓库这边：一个小的 HTTP 客户端、一个纯谓词门禁检查，数据过期或者检查本身查不到都 fail-closed。
+- **G2（二次确认）**——[ADR-003](https://github.com/xingaiapp/xingai-robinhood-mcp/blob/main/docs/adr/003-g2-step-up-wired-single-user.zh.md)。同样的发现：Invest AI 的管理员邮箱 OTP 流程（那边的 ADR-024）已经是一个公开、可调用的端点。直接复用，没有搭一套通用的按用户 step-up 认证——这个网关现在只有一个操作者，为一个用户量的场景搭多用户基础设施是投机性的工作。金额在可配置门槛以内的订单直接跳过检查（G1 的人工确认已经覆盖了这些）；超过门槛的，或者 `cancel_equity_order`（没有已知金额）的，需要一个实时校验过的管理员 session。
+
+**通过这个网关依然没有任何一笔交易能成功**——这一点没变。变的是原因：现在挡着的是 G4（结构性风险清单）和 G5（决策快照引用），不再是四道门。G4 今天在 Invest AI 那边也拿到了第一个真实子信号：一个 `confidence_kind` 字段，让 UI 不再暗示"置信度"是经过校准的概率；还有一个 worker 计算的二次行情交叉校验（Yahoo vs. Tradier），在没配置 Tradier API key 之前诚实地报 `unavailable`——写这篇更新的时候，确实还没配。
+
+有一个实现细节值得单独说一下：那个二次行情校验的第一版是在 FastAPI 请求处理函数里直接同步调用 Tradier——直接违反了 Invest AI 自己的 [ADR-012](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/adr/012-decision-cache-boundary.zh.md)（worker 计算，API 只读缓存），这条规则这同一个代码库[已经写过两次博客](2026-05-13-cqrs-sqlite-worker-writes.zh.md)。上线前被发现并修掉了——现在 worker 每个刷新周期调用一次 Tradier 并缓存结果，API 端点只读这个缓存。便宜的教训：在 ADR 里写下一条架构规则，不代表五分钟后写的不相关新代码会自动遵守它。
+
 ## 相关
 
 - [ADR-001：MCP 网关代理](https://github.com/xingaiapp/xingai-robinhood-mcp/blob/main/docs/adr/001-mcp-gateway-proxy.zh.md)
+- [ADR-002：G3 数据新鲜度接通](https://github.com/xingaiapp/xingai-robinhood-mcp/blob/main/docs/adr/002-g3-data-freshness-wired.zh.md)
+- [ADR-003：G2 二次确认接通（限单用户）](https://github.com/xingaiapp/xingai-robinhood-mcp/blob/main/docs/adr/003-g2-step-up-wired-single-user.zh.md)
 - [Invest AI ADR-028：Robinhood MCP 执行门控](2026-06-25-robinhood-mcp-execution-gates-adr-028.zh.md)
+- [Invest AI ADR-012：决策缓存边界](https://github.com/xingaiapp/xingai-invest-ai/blob/main/docs/adr/012-decision-cache-boundary.zh.md)
 - [Agent Firewall ADR-003：审批流 + Decision Ledger](2026-07-05-agent-firewall-helpfulness-attack-surface.zh.md)
 - 模式：[`agent-execution-gate`](https://github.com/xingaiapp/xingai-engineering-system/blob/main/patterns/agent-execution-gate.md)
+- 模式：[`worker-cache-boundary`](https://github.com/xingaiapp/xingai-engineering-system/blob/main/patterns/worker-cache-boundary.md)
 - 企业篇：[Agent 治理参考架构](https://github.com/xingaiapp/xingai-enterprise-ai-design/blob/main/articles/2026-07-05-agent-governance-reference-architecture.zh.md)
