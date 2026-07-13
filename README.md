@@ -12,6 +12,9 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-13 | [Scope Isn't Policy: The Second Wall in claims-mcp-oauth-poc](posts/2026-07-13-mcp-auth-scope-is-not-policy-second-wall.md) · [中文](posts/2026-07-13-mcp-auth-scope-is-not-policy-second-wall.zh.md) | Enterprise AI POCs | `mcp` `oauth` `authorization` `policy-engine` `governance` `education` |
+| 2026-07-13 | [MCP Auth Mechanics: Discovery, PKCE, and What Gets Checked on Every Call](posts/2026-07-13-mcp-auth-api-key-vs-oauth-pkce.md) · [中文](posts/2026-07-13-mcp-auth-api-key-vs-oauth-pkce.zh.md) | Enterprise AI POCs | `mcp` `oauth` `pkce` `authorization` `education` |
+| 2026-07-13 | [Why MCP Needs OAuth, Not Just an API Key](posts/2026-07-13-mcp-oauth-vs-api-key.md) · [中文](posts/2026-07-13-mcp-oauth-vs-api-key.zh.md) | Enterprise AI POCs | `mcp` `oauth` `pkce` `authorization` `api-design` `education` |
 | 2026-07-13 | [Full API Coverage First: A Claims Partner MCP POC](posts/2026-07-13-claims-partner-api-mcp-poc-full-coverage-first.md) · [中文](posts/2026-07-13-claims-partner-api-mcp-poc-full-coverage-first.zh.md) | Enterprise AI POCs | `mcp` `api-design` `insurance` `claims` `typescript` `openapi` |
 | 2026-07-12 | [Same Crypto, Different Industry: A Claims MCP OAuth POC](posts/2026-07-12-claims-mcp-oauth-poc-same-auth-different-industry.md) · [中文](posts/2026-07-12-claims-mcp-oauth-poc-same-auth-different-industry.zh.md) | Enterprise AI POCs | `mcp` `oauth` `pkce` `insurance` `claims` `agent-security` `human-in-the-loop` |
 | 2026-07-11 | [A Trading Gateway That Blocks Every Order (On Purpose)](posts/2026-07-11-robinhood-mcp-gateway-fail-closed.md) · [中文](posts/2026-07-11-robinhood-mcp-gateway-fail-closed.zh.md) | Robinhood MCP | `mcp` `robinhood` `agent-security` `human-in-the-loop` `governance` `adr` |
