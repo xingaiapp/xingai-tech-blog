@@ -12,6 +12,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-14 | [Empty Tables, Full Issues: Fixing the Opportunity Radar Newsletter Body](posts/2026-07-14-opportunity-radar-newsletter-narrative-body.md) · [中文](posts/2026-07-14-opportunity-radar-newsletter-narrative-body.zh.md) | Opportunity Radar | `newsletter` `resend` `opportunity-radar` `github-actions` `adr` |
 | 2026-07-13 | [Scope Isn't Policy: The Second Wall in claims-mcp-oauth-poc](posts/2026-07-13-mcp-auth-scope-is-not-policy-second-wall.md) · [中文](posts/2026-07-13-mcp-auth-scope-is-not-policy-second-wall.zh.md) | Enterprise AI POCs | `mcp` `oauth` `authorization` `policy-engine` `governance` `education` |
 | 2026-07-13 | [MCP Auth Mechanics: Discovery, PKCE, and What Gets Checked on Every Call](posts/2026-07-13-mcp-auth-api-key-vs-oauth-pkce.md) · [中文](posts/2026-07-13-mcp-auth-api-key-vs-oauth-pkce.zh.md) | Enterprise AI POCs | `mcp` `oauth` `pkce` `authorization` `education` |
 | 2026-07-13 | [Why MCP Needs OAuth, Not Just an API Key](posts/2026-07-13-mcp-oauth-vs-api-key.md) · [中文](posts/2026-07-13-mcp-oauth-vs-api-key.zh.md) | Enterprise AI POCs | `mcp` `oauth` `pkce` `authorization` `api-design` `education` |
