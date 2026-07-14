@@ -12,6 +12,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-14 | [From Mock Patterns to Cached Learning Data: Learn AI Gets Real Metadata](posts/2026-07-14-learn-ai-real-pattern-cache-decision-ledger.md) · [中文](posts/2026-07-14-learn-ai-real-pattern-cache-decision-ledger.zh.md) | Learn AI | `learn-ai` `cache-always` `decision-ledger` `metadata` `patterns` |
 | 2026-07-14 | [The Trading UI Still Does Not Trade: Robinhood MCP Control Plane](posts/2026-07-14-robinhood-control-plane-http-api.md) · [中文](posts/2026-07-14-robinhood-control-plane-http-api.zh.md) | Robinhood MCP | `mcp` `robinhood` `control-plane` `human-in-the-loop` `agent-security` |
 | 2026-07-14 | [From Honest 404 to Cached Scores: Decision Engine's First Producer](posts/2026-07-14-decision-engine-cached-ohlcv-score-export.md) · [中文](posts/2026-07-14-decision-engine-cached-ohlcv-score-export.zh.md) | Decision Engine | `decision-engine` `scoring` `cache` `cqrs` `adr` |
 | 2026-07-14 | [Empty Tables, Full Issues: Fixing the Opportunity Radar Newsletter Body](posts/2026-07-14-opportunity-radar-newsletter-narrative-body.md) · [中文](posts/2026-07-14-opportunity-radar-newsletter-narrative-body.zh.md) | Opportunity Radar | `newsletter` `resend` `opportunity-radar` `github-actions` `adr` |
