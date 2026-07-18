@@ -12,6 +12,7 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-07-18 | [After Fail-Closed: Robinhood MCP Gates, Freshness, Step-Up, and Why It Still Does Not Autotrade](posts/2026-07-18-robinhood-mcp-gates-after-fail-closed.md) · [中文](posts/2026-07-18-robinhood-mcp-gates-after-fail-closed.zh.md) | Robinhood MCP + Invest AI | `mcp` `robinhood` `execution-gates` `step-up-auth` `data-freshness` `decision-boundary` `adr` |
 | 2026-07-17 | [Twelve Steps Are Not Twelve Tool Logos](posts/2026-07-17-llm-guardrails-twelve-steps-not-tool-stickers.md) · [中文](posts/2026-07-17-llm-guardrails-twelve-steps-not-tool-stickers.zh.md) | Enterprise AI POCs | `guardrails` `monitoring` `mcp` `rag` `governance` `education` `poc` |
 | 2026-07-16 | [Grammar Fixes Are Not Senior Communication: A 14-Day Skill Curriculum + Decision Ledger](posts/2026-07-16-engineering-communication-curriculum-decision-ledger.md) · [中文](posts/2026-07-16-engineering-communication-curriculum-decision-ledger.zh.md) | Engineering Communication Coach | `curriculum` `decision-ledger` `workplace-english` `coaching` `adr` |
 | 2026-07-14 | [From Mock Patterns to Cached Learning Data: Learn AI Gets Real Metadata](posts/2026-07-14-learn-ai-real-pattern-cache-decision-ledger.md) · [中文](posts/2026-07-14-learn-ai-real-pattern-cache-decision-ledger.zh.md) | Learn AI | `learn-ai` `cache-always` `decision-ledger` `metadata` `patterns` |
