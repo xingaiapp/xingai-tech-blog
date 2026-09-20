@@ -1,0 +1,43 @@
+# XingAI Tech Blog
+
+- URL: https://blog.xingai.app
+- Product: Public engineering archive for XingAI decision-system products
+- Publisher: XingAI (https://xingai.app)
+- Languages: UI in English, 中文, 한국어. Articles in English and 中文.
+
+## Main user flow
+
+1. Open https://blog.xingai.app
+2. Pick a post from the latest list or /posts
+3. Read the English or 中文 article
+4. Filter by tag when you want one topic (MCP, CQRS, ADR, etc.)
+
+## What this is
+
+Engineering notes about how XingAI products are built: cache boundaries, MCP gates, Fly/Vercel hosting, ADRs. The Markdown source lives in https://github.com/xingaiapp/xingai-tech-blog.
+
+This is not an investing blog and not a product funnel. Product apps live on their own domains (invest.xingai.app, research.xingai.app, cook.xingai.app, and others listed on xingai.app).
+
+## FAQ
+
+Q: What is XingAI Tech Blog?
+A: A public archive of engineering posts from XingAI, published at blog.xingai.app and as Markdown on GitHub.
+
+Q: Which languages are supported?
+A: UI: English, 中文, 한국어. Articles: English and 中文.
+
+Q: Is this investment advice?
+A: No. Posts are engineering notes. Product outputs are suggestions, not professional advice.
+
+Q: How is content licensed?
+A: Posts are CC BY 4.0 unless a post says otherwise.
+
+## Legal
+
+- Privacy: https://blog.xingai.app/legal/privacy
+- Terms: https://blog.xingai.app/legal/terms
+- Disclaimer: https://blog.xingai.app/legal/disclaimer
+
+## Disclaimer (one line)
+
+Informational engineering notes; not professional, legal, or investment advice. XingAI is not responsible for how you use the writing or code.

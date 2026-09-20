@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: oklch(0.985 0.004 145);
+  --foreground: oklch(0.22 0.02 150);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.02 150);
+  --muted: oklch(0.96 0.015 145);
+  --muted-foreground: oklch(0.45 0.03 145);
+  --border: oklch(0.9 0.02 145);
+  --primary: oklch(0.52 0.19 145);
+  --primary-foreground: oklch(0.99 0 0);
+  --header-bg: oklch(0.985 0.004 145 / 0.92);
+  --radius: 1rem;
+}
+
+.dark {
+  --background: oklch(0.14 0.01 145);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.19 0.02 145);
+  --card-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.22 0.02 145);
+  --muted-foreground: oklch(0.72 0.02 150);
+  --border: oklch(0.3 0.03 145);
+  --primary: oklch(0.62 0.18 145);
+  --primary-foreground: oklch(0.14 0.01 145);
+  --header-bg: oklch(0.14 0.01 145 / 0.92);
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border-radius: 0.9rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 20px oklch(0.52 0.19 145 / 0.22);
+}
+
+.btn-secondary {
+  background: var(--card);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.hero-enter {
+  animation: hero-in 420ms ease both;
+}
+
+.list-enter > * {
+  animation: card-in 380ms ease both;
+}
+
+.list-enter > *:nth-child(1) { animation-delay: 40ms; }
+.list-enter > *:nth-child(2) { animation-delay: 80ms; }
+.list-enter > *:nth-child(3) { animation-delay: 120ms; }
+.list-enter > *:nth-child(4) { animation-delay: 160ms; }
+.list-enter > *:nth-child(5) { animation-delay: 200ms; }
+.list-enter > *:nth-child(6) { animation-delay: 240ms; }
+
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .list-enter > * {
+    animation: none;
+  }
+  .btn {
+    transition: none;
+  }
+  .btn:active {
+    transform: none;
+  }
+}
+
+.prose-blog {
+  max-width: 42rem;
+}
+
+.prose-blog h2 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.prose-blog h3 {
+  margin-top: 1.4rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+.prose-blog p,
+.prose-blog li {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--foreground);
+}
+
+.prose-blog p + p {
+  margin-top: 0.9rem;
+}
+
+.prose-blog ul,
+.prose-blog ol {
+  margin: 0.8rem 0 0.8rem 1.15rem;
+}
+
+.prose-blog li + li {
+  margin-top: 0.35rem;
+}
+
+.prose-blog a {
+  color: var(--primary);
+  text-underline-offset: 3px;
+}
+
+.prose-blog pre {
+  margin: 1rem 0;
+  overflow-x: auto;
+  border-radius: 0.9rem;
+  border: 1px solid var(--border);
+  background: var(--muted);
+  padding: 0.9rem 1rem;
+  font-size: 0.85rem;
+}
+
+.prose-blog code {
+  font-size: 0.9em;
+}
+
+.prose-blog :not(pre) > code {
+  border-radius: 0.35rem;
+  background: var(--muted);
+  padding: 0.1em 0.35em;
+}
+
+.prose-blog img {
+  margin: 1rem 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.9rem;
+  border: 1px solid var(--border);
+}
+
+.prose-blog blockquote {
+  margin: 1rem 0;
+  border-left: 3px solid var(--primary);
+  padding-left: 0.9rem;
+  color: var(--muted-foreground);
+}
+
+.mermaid-wrap {
+  margin: 1rem 0;
+  overflow-x: auto;
+  border-radius: 0.9rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  padding: 0.75rem;
+}
+
+.mermaid-wrap svg {
+  max-width: 100%;
+  height: auto;
+}

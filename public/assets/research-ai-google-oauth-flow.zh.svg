@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" role="img" aria-labelledby="title desc">
+  <title id="title">Research AI Google OAuth 登录流程</title>
+  <desc id="desc">解释 Research AI Google OAuth 从登录、Google 授权、callback、session 到不限次数实时研究权限的 UX 架构图。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="48%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#10243c"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6ea8ff"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .kicker { font: 800 17px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; fill: #93c5fd; letter-spacing: 3px; }
+      .title { font: 850 56px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; fill: #f8fafc; letter-spacing: 0; }
+      .subtitle { font: 500 24px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; fill: #a7b3c7; }
+      .cardTitle { font: 800 27px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; fill: #f8fafc; }
+      .cardBody { font: 560 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; fill: #cbd5e1; }
+      .num { font: 850 20px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #020617; }
+      .label { font: 820 13px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; fill: #bfdbfe; letter-spacing: 1.8px; }
+      .env { font: 650 17px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #dbeafe; }
+      .footer { font: 650 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif; fill: #cbd5e1; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="960" fill="url(#bg)"/>
+  <circle cx="142" cy="122" r="230" fill="#2563eb" opacity="0.16"/>
+  <circle cx="1438" cy="176" r="250" fill="#22c55e" opacity="0.10"/>
+  <circle cx="1180" cy="884" r="330" fill="#8b5cf6" opacity="0.12"/>
+
+  <text x="76" y="88" class="kicker">RESEARCH AI AUTH FLOW</text>
+  <text x="76" y="158" class="title">Google OAuth：一个按钮，四个契约</text>
+  <text x="78" y="206" class="subtitle">登录按钮能工作，前提是 Google Cloud、Vercel、Auth.js 和当前域名 alias 完全对齐。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="78" y="286" width="278" height="182" rx="28" fill="#111827" stroke="#2f4165" stroke-width="2"/>
+    <circle cx="122" cy="334" r="24" fill="url(#blue)"/>
+    <text x="122" y="342" text-anchor="middle" class="num">1</text>
+    <text x="164" y="342" class="cardTitle">用户点击登录</text>
+    <text x="112" y="388" class="cardBody">Research AI 打开</text>
+    <text x="112" y="416" class="cardBody">/login，并开始</text>
+    <text x="112" y="444" class="cardBody">Google 授权流程。</text>
+  </g>
+
+  <path d="M376 376 H448" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M448 376 l-14 -9 v18 z" fill="#64748b"/>
+
+  <g filter="url(#shadow)">
+    <rect x="470" y="286" width="278" height="182" rx="28" fill="#111827" stroke="#2f4165" stroke-width="2"/>
+    <circle cx="514" cy="334" r="24" fill="url(#blue)"/>
+    <text x="514" y="342" text-anchor="middle" class="num">2</text>
+    <text x="556" y="342" class="cardTitle">Auth.js 跳转</text>
+    <text x="504" y="388" class="cardBody">服务端用 client id</text>
+    <text x="504" y="416" class="cardBody">生成 Google 授权</text>
+    <text x="504" y="444" class="cardBody">URL。</text>
+  </g>
+
+  <path d="M768 376 H840" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M840 376 l-14 -9 v18 z" fill="#64748b"/>
+
+  <g filter="url(#shadow)">
+    <rect x="862" y="286" width="278" height="182" rx="28" fill="#111827" stroke="#2f4165" stroke-width="2"/>
+    <circle cx="906" cy="334" r="24" fill="url(#amber)"/>
+    <text x="906" y="342" text-anchor="middle" class="num">3</text>
+    <text x="948" y="342" class="cardTitle">Google 授权</text>
+    <text x="896" y="388" class="cardBody">Google 检查</text>
+    <text x="896" y="416" class="cardBody">redirect URI，并让</text>
+    <text x="896" y="444" class="cardBody">用户确认授权。</text>
+  </g>
+
+  <path d="M1160 376 H1232" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M1232 376 l-14 -9 v18 z" fill="#64748b"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1254" y="286" width="278" height="182" rx="28" fill="#111827" stroke="#2f4165" stroke-width="2"/>
+    <circle cx="1298" cy="334" r="24" fill="url(#green)"/>
+    <text x="1298" y="342" text-anchor="middle" class="num">4</text>
+    <text x="1340" y="342" class="cardTitle">Callback 返回</text>
+    <text x="1288" y="388" class="cardBody">Google 带授权码</text>
+    <text x="1288" y="416" class="cardBody">回到 Auth.js 的</text>
+    <text x="1288" y="444" class="cardBody">callback route。</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="180" y="560" width="560" height="222" rx="30" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
+    <text x="218" y="612" class="label">VERCEL SERVER ENV</text>
+    <text x="218" y="660" class="env">GOOGLE_CLIENT_ID</text>
+    <text x="218" y="696" class="env">GOOGLE_CLIENT_SECRET</text>
+    <text x="218" y="732" class="env">AUTH_SECRET</text>
+    <text x="218" y="768" class="env">AUTH_URL / NEXTAUTH_URL</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="860" y="560" width="560" height="222" rx="30" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
+    <text x="898" y="612" class="label">PRODUCT RESULT</text>
+    <text x="898" y="660" class="cardTitle">Session 创建成功</text>
+    <text x="898" y="700" class="cardBody">Research AI 可以识别用户。</text>
+    <text x="898" y="732" class="cardBody">缓存主题继续免费。</text>
+    <text x="898" y="764" class="cardBody">登录用户跳过实时次数限制。</text>
+  </g>
+
+  <path d="M740 672 H838" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M838 672 l-14 -9 v18 z" fill="#64748b"/>
+
+  <g>
+    <rect x="228" y="838" width="1144" height="62" rx="31" fill="#020617" stroke="#334155" stroke-width="2"/>
+    <text x="800" y="877" text-anchor="middle" class="footer">契约：Google redirect URI == Auth.js callback == Vercel production domain == active alias</text>
+  </g>
+</svg>

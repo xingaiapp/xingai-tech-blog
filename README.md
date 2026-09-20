@@ -1,5 +1,7 @@
 # XingAI Tech Blog
 
+**Current site: 0.1.0 (2026-09-20)** — first static site from the existing Markdown archive. Built and verified locally. **`blog.xingai.app` is not live yet** (needs Vercel + DNS).
+
 Technical deep dives, architecture decisions, and engineering notes from the [XingAI](https://xingai.app) team.
 
 > We build focused AI decision systems for everyday life. This repo documents **how** we build them.
@@ -8,10 +10,26 @@ Technical deep dives, architecture decisions, and engineering notes from the [Xi
 
 **Public repo:** Review [docs/PUBLIC-SECURITY.md](docs/PUBLIC-SECURITY.md) before every push — no credentials, bypass paths, or production auth gaps in posts.
 
+**Disclaimer:** [DISCLAIMER.md](DISCLAIMER.md) — informational notes, no warranty, not professional advice.
+
+## Site
+
+| | |
+|---|---|
+| Production (intended) | https://blog.xingai.app — **pending Vercel + DNS** |
+| Source | `/posts/*.md` + `/posts/*.zh.md` |
+| Local | `npm install && npm run dev` → http://localhost:3010 |
+| Deploy | Vercel, repo root. See [VERCEL.md](VERCEL.md). Domain is not pointed yet. |
+
+UI languages: English, 中文, 한국어. Article bodies: English + 中文 (Korean UI shows English/中文 posts until translations exist).
+
+Hero assets: `public/brand/hero-bg-light-visual.png` + `public/brand/hero-bg-visual.png`. OG: `public/og-image.png`.
+
 ## Posts
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-09-20 | [The Archive Was Already Written. It Just Was Not a Site.](posts/2026-09-20-tech-blog-static-site-from-markdown.md) · [中文](posts/2026-09-20-tech-blog-static-site-from-markdown.zh.md) | XingAI Tech Blog | `tech-blog` `nextjs` `seo` `aeo` `i18n` `vercel` |
 | 2026-08-05 | [Three Repos, One Paper-to-Draft Loop](posts/2026-08-05-three-repos-one-paper-to-draft-loop.md) · [中文](posts/2026-08-05-three-repos-one-paper-to-draft-loop.zh.md) | Invest AI + InvestSim + Robinhood MCP | `invest-ai` `investsim` `mcp` `robinhood` `paper-trading` `adr` `worker-cache` |
 | 2026-08-05 | [Today Intelligence and the Report Surfaces That Stay Inside Invest AI](posts/2026-08-05-invest-ai-today-intelligence-report-surfaces.md) · [中文](posts/2026-08-05-invest-ai-today-intelligence-report-surfaces.zh.md) | Invest AI | `invest-ai` `reporting` `worker` `cache` `adr` `intelligence` |
 | 2026-08-05 | [From Signal Events to Strategy Lab: Worker-Owned Paper Inside Invest AI](posts/2026-08-05-invest-ai-ohlcv-paper-strategy-lab.md) · [中文](posts/2026-08-05-invest-ai-ohlcv-paper-strategy-lab.zh.md) | Invest AI | `invest-ai` `paper-trading` `ohlcv` `strategy-lab` `eee` `cqrs` `adr` |

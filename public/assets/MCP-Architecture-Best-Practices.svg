@@ -1,0 +1,169 @@
+<svg viewBox="0 0 680 1420" xmlns="http://www.w3.org/2000/svg">
+<title>MCP Architecture: Connection Patterns &amp; Auth — Industry Best Practices</title>
+<rect width="680" height="1420" fill="white"/>
+<defs>
+  <marker id="arr"   markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#5F5E5A"/></marker>
+  <marker id="arr-b" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#185FA5"/></marker>
+  <marker id="arr-g" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#0F6E56"/></marker>
+  <marker id="arr-p" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#534AB7"/></marker>
+</defs>
+<rect x="10" y="10" width="660" height="295" rx="12" fill="#E6F1FB" stroke="#85B7EB" stroke-width="1.5"/>
+<text x="30" y="38" font-size="15" font-weight="500" fill="#042C53" font-family="Arial,sans-serif">① Agent → MCP   How an AI agent uses tools</text>
+<rect x="40" y="55" width="130" height="72" rx="8" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="1.5"/>
+<text x="105" y="79" text-anchor="middle" font-size="13" font-weight="500" fill="#3C3489" font-family="Arial,sans-serif">AI Agent</text>
+<text x="105" y="95" text-anchor="middle" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">(LLM + system prompt)</text>
+<text x="105" y="111" text-anchor="middle" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">Knows which tools</text>
+<text x="105" y="124" text-anchor="middle" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">it is allowed to call</text>
+<line x1="172" y1="91" x2="240" y2="91" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arr-b)"/>
+<text x="206" y="84" text-anchor="middle" font-size="9" fill="#185FA5" font-family="Arial,sans-serif">① tools/list</text>
+<text x="206" y="97" text-anchor="middle" font-size="9" fill="#185FA5" font-family="Arial,sans-serif">(request tool menu)</text>
+<rect x="242" y="55" width="150" height="72" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1.5"/>
+<text x="317" y="79" text-anchor="middle" font-size="13" font-weight="500" fill="#085041" font-family="Arial,sans-serif">MCP Server</text>
+<text x="317" y="95" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">Tool registry</text>
+<text x="317" y="111" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">Filters by agent scope</text>
+<text x="317" y="124" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">before responding</text>
+<line x1="394" y1="91" x2="460" y2="91" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arr-b)"/>
+<text x="427" y="84" text-anchor="middle" font-size="9" fill="#185FA5" font-family="Arial,sans-serif">③ tools/call</text>
+<text x="427" y="97" text-anchor="middle" font-size="9" fill="#185FA5" font-family="Arial,sans-serif">(execute tool)</text>
+<rect x="462" y="55" width="175" height="72" rx="8" fill="#FAEEDA" stroke="#FAC775" stroke-width="1.5"/>
+<text x="549" y="79" text-anchor="middle" font-size="13" font-weight="500" fill="#633806" font-family="Arial,sans-serif">Backend System</text>
+<text x="549" y="95" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">Database / API / Files</text>
+<text x="549" y="111" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">CTABS / Salesforce /</text>
+<text x="549" y="124" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">any enterprise system</text>
+<line x1="394" y1="110" x2="176" y2="110" stroke="#5F5E5A" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+<text x="285" y="124" text-anchor="middle" font-size="9" fill="#5F5E5A" font-family="Arial,sans-serif">② returns only permitted tools</text>
+<rect x="40" y="148" width="600" height="148" rx="8" fill="white" stroke="#B5D4F4" stroke-width="1"/>
+<text x="60" y="170" font-size="11" font-weight="500" fill="#042C53" font-family="Arial,sans-serif">5-step flow:</text>
+<text x="60" y="190" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Step 1   Agent starts → connects to MCP Server (MCP initialize handshake)</text>
+<text x="60" y="208" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Step 2   Agent requests tool list (tools/list) → MCP returns only scoped tools</text>
+<text x="60" y="226" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Step 3   LLM sees tool list → decides which tool to call</text>
+<text x="60" y="244" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Step 4   Agent calls tool (tools/call) → MCP re-validates → backend executes</text>
+<text x="60" y="262" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Step 5   Result returned to Agent → Agent continues conversation</text>
+<text x="60" y="282" font-size="10" fill="#888780" font-family="Arial,sans-serif">Key: Agent never sees tools outside its scope. Calling a hidden tool returns an error before backend is touched.</text>
+<rect x="10" y="320" width="660" height="280" rx="12" fill="#EAF3DE" stroke="#97C459" stroke-width="1.5"/>
+<text x="30" y="348" font-size="15" font-weight="500" fill="#173404" font-family="Arial,sans-serif">② MCP → MCP   Chained / federated MCP servers</text>
+<rect x="40" y="365" width="145" height="62" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1.5"/>
+<text x="112" y="388" text-anchor="middle" font-size="12" font-weight="500" fill="#085041" font-family="Arial,sans-serif">MCP-A (Gateway)</text>
+<text x="112" y="404" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">Receives agent request</text>
+<text x="112" y="418" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">Routes sub-tasks</text>
+<line x1="187" y1="383" x2="248" y2="372" stroke="#3B6D11" stroke-width="1.5" marker-end="url(#arr-g)"/>
+<text x="218" y="364" text-anchor="middle" font-size="9" fill="#3B6D11" font-family="Arial,sans-serif">sub-task 1</text>
+<line x1="187" y1="400" x2="248" y2="432" stroke="#3B6D11" stroke-width="1.5" marker-end="url(#arr-g)"/>
+<text x="218" y="434" text-anchor="middle" font-size="9" fill="#3B6D11" font-family="Arial,sans-serif">sub-task 2</text>
+<rect x="250" y="353" width="145" height="55" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1.5"/>
+<text x="322" y="376" text-anchor="middle" font-size="12" font-weight="500" fill="#085041" font-family="Arial,sans-serif">MCP-B (Read)</text>
+<text x="322" y="392" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">Query / lookup only</text>
+<text x="322" y="406" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">e.g. fetch claim data</text>
+<rect x="250" y="420" width="145" height="55" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1.5"/>
+<text x="322" y="443" text-anchor="middle" font-size="12" font-weight="500" fill="#085041" font-family="Arial,sans-serif">MCP-C (Write)</text>
+<text x="322" y="459" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">Write / update only</text>
+<text x="322" y="473" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">e.g. update claim status</text>
+<line x1="397" y1="378" x2="460" y2="393" stroke="#3B6D11" stroke-width="1.5" marker-end="url(#arr-g)"/>
+<line x1="397" y1="448" x2="460" y2="425" stroke="#3B6D11" stroke-width="1.5" marker-end="url(#arr-g)"/>
+<rect x="462" y="362" width="185" height="125" rx="8" fill="#FAEEDA" stroke="#FAC775" stroke-width="1.5"/>
+<text x="554" y="386" text-anchor="middle" font-size="12" font-weight="500" fill="#633806" font-family="Arial,sans-serif">Backend System</text>
+<text x="554" y="404" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">Each MCP has its own identity</text>
+<text x="554" y="420" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">MCP-B: read-only credential</text>
+<text x="554" y="436" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">MCP-C: write credential</text>
+<text x="554" y="452" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">Permissions are isolated</text>
+<text x="554" y="472" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">(Principle of Least Privilege)</text>
+<rect x="40" y="500" width="600" height="90" rx="8" fill="white" stroke="#C0DD97" stroke-width="1"/>
+<text x="60" y="521" font-size="11" font-weight="500" fill="#173404" font-family="Arial,sans-serif">Use case: microservice decomposition / separation of concerns</text>
+<text x="60" y="539" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">MCP-A receives the agent request → routes to MCP-B (read) or MCP-C (write) based on task type</text>
+<text x="60" y="557" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Each MCP authenticates independently to the backend — no credential sharing between servers</text>
+<text x="60" y="577" font-size="10" fill="#888780" font-family="Arial,sans-serif">Key: When MCP-A calls MCP-B, it must present its own identity token — cannot forward the upstream agent token.</text>
+<rect x="10" y="615" width="660" height="295" rx="12" fill="#FBEAF0" stroke="#ED93B1" stroke-width="1.5"/>
+<text x="30" y="643" font-size="15" font-weight="500" fill="#4B1528" font-family="Arial,sans-serif">③ Agent → Agent   Multi-agent orchestration</text>
+<rect x="40" y="660" width="152" height="72" rx="8" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="1.5"/>
+<text x="116" y="682" text-anchor="middle" font-size="12" font-weight="500" fill="#3C3489" font-family="Arial,sans-serif">Orchestrator</text>
+<text x="116" y="698" text-anchor="middle" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">Primary agent</text>
+<text x="116" y="714" text-anchor="middle" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">Breaks down tasks</text>
+<text x="116" y="728" text-anchor="middle" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">Aggregates results</text>
+<line x1="194" y1="679" x2="268" y2="668" stroke="#993356" stroke-width="1.5" marker-end="url(#arr-p)"/>
+<text x="231" y="660" text-anchor="middle" font-size="9" fill="#993356" font-family="Arial,sans-serif">sub-task A</text>
+<rect x="270" y="648" width="148" height="58" rx="8" fill="#FBEAF0" stroke="#ED93B1" stroke-width="1.5"/>
+<text x="344" y="670" text-anchor="middle" font-size="12" font-weight="500" fill="#4B1528" font-family="Arial,sans-serif">Sub-Agent 1</text>
+<text x="344" y="686" text-anchor="middle" font-size="10" fill="#993556" font-family="Arial,sans-serif">Specialised: data retrieval</text>
+<text x="344" y="700" text-anchor="middle" font-size="10" fill="#993556" font-family="Arial,sans-serif">Calls read-only MCP</text>
+<line x1="194" y1="698" x2="268" y2="724" stroke="#993356" stroke-width="1.5" marker-end="url(#arr-p)"/>
+<text x="231" y="736" text-anchor="middle" font-size="9" fill="#993356" font-family="Arial,sans-serif">sub-task B</text>
+<rect x="270" y="714" width="148" height="58" rx="8" fill="#FBEAF0" stroke="#ED93B1" stroke-width="1.5"/>
+<text x="344" y="736" text-anchor="middle" font-size="12" font-weight="500" fill="#4B1528" font-family="Arial,sans-serif">Sub-Agent 2</text>
+<text x="344" y="752" text-anchor="middle" font-size="10" fill="#993556" font-family="Arial,sans-serif">Specialised: risk scoring</text>
+<text x="344" y="766" text-anchor="middle" font-size="10" fill="#993556" font-family="Arial,sans-serif">Calls analytics MCP</text>
+<line x1="420" y1="674" x2="466" y2="674" stroke="#993356" stroke-width="1.5" marker-end="url(#arr-p)"/>
+<line x1="420" y1="744" x2="466" y2="744" stroke="#993356" stroke-width="1.5" marker-end="url(#arr-p)"/>
+<rect x="468" y="652" width="175" height="46" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1.5"/>
+<text x="555" y="672" text-anchor="middle" font-size="11" font-weight="500" fill="#085041" font-family="Arial,sans-serif">MCP (Query)</text>
+<text x="555" y="688" text-anchor="middle" font-size="9" fill="#0F6E56" font-family="Arial,sans-serif">read-only scope</text>
+<rect x="468" y="722" width="175" height="46" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1.5"/>
+<text x="555" y="742" text-anchor="middle" font-size="11" font-weight="500" fill="#085041" font-family="Arial,sans-serif">MCP (Analytics)</text>
+<text x="555" y="758" text-anchor="middle" font-size="9" fill="#0F6E56" font-family="Arial,sans-serif">compute scope</text>
+<rect x="40" y="790" width="600" height="110" rx="8" fill="white" stroke="#F4C0D1" stroke-width="1"/>
+<text x="60" y="811" font-size="11" font-weight="500" fill="#4B1528" font-family="Arial,sans-serif">Use case: complex tasks, parallel workloads</text>
+<text x="60" y="829" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Orchestrator receives complex request → splits into parallel sub-tasks → delegates to specialist sub-agents</text>
+<text x="60" y="847" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Sub-agents connect to their own MCP servers, complete work, return results to orchestrator</text>
+<text x="60" y="865" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Orchestrator aggregates and returns the final response</text>
+<text x="60" y="885" font-size="10" fill="#888780" font-family="Arial,sans-serif">Key: Sub-agent permissions must be a subset of the orchestrator's permissions (no privilege escalation downward).</text>
+<rect x="10" y="925" width="660" height="480" rx="12" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1.5"/>
+<text x="30" y="953" font-size="15" font-weight="500" fill="#2C2C2A" font-family="Arial,sans-serif">④ Vendor → MCP   Authentication &amp; Authorization flow</text>
+<rect x="30" y="968" width="142" height="84" rx="8" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="1.5"/>
+<text x="101" y="988" text-anchor="middle" font-size="11" font-weight="500" fill="#3C3489" font-family="Arial,sans-serif">Step 1: Who am I?</text>
+<text x="101" y="1004" text-anchor="middle" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">Authentication</text>
+<text x="101" y="1020" text-anchor="middle" font-size="9" fill="#534AB7" font-family="Arial,sans-serif">API Key / OAuth /</text>
+<text x="101" y="1034" text-anchor="middle" font-size="9" fill="#534AB7" font-family="Arial,sans-serif">mTLS certificate</text>
+<text x="101" y="1048" text-anchor="middle" font-size="9" fill="#534AB7" font-family="Arial,sans-serif">→ "I am Five Sigma"</text>
+<line x1="174" y1="1010" x2="192" y2="1010" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="194" y="968" width="142" height="84" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1.5"/>
+<text x="265" y="988" text-anchor="middle" font-size="11" font-weight="500" fill="#085041" font-family="Arial,sans-serif">Step 2: Which agent?</text>
+<text x="265" y="1004" text-anchor="middle" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">Profile selection</text>
+<text x="265" y="1020" text-anchor="middle" font-size="9" fill="#0F6E56" font-family="Arial,sans-serif">Send header:</text>
+<text x="265" y="1034" text-anchor="middle" font-size="9" fill="#0F6E56" font-family="Arial,sans-serif">X-Agent-Profile:</text>
+<text x="265" y="1048" text-anchor="middle" font-size="9" fill="#0F6E56" font-family="Arial,sans-serif">fnol-intake</text>
+<line x1="338" y1="1010" x2="356" y2="1010" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="358" y="968" width="142" height="84" rx="8" fill="#FAEEDA" stroke="#FAC775" stroke-width="1.5"/>
+<text x="429" y="988" text-anchor="middle" font-size="11" font-weight="500" fill="#633806" font-family="Arial,sans-serif">Step 3: What tools?</text>
+<text x="429" y="1004" text-anchor="middle" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">Authorization</text>
+<text x="429" y="1020" text-anchor="middle" font-size="9" fill="#854F0B" font-family="Arial,sans-serif">MCP checks profile</text>
+<text x="429" y="1034" text-anchor="middle" font-size="9" fill="#854F0B" font-family="Arial,sans-serif">returns scoped</text>
+<text x="429" y="1048" text-anchor="middle" font-size="9" fill="#854F0B" font-family="Arial,sans-serif">tool list only</text>
+<line x1="502" y1="1010" x2="520" y2="1010" stroke="#5F5E5A" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="522" y="968" width="130" height="84" rx="8" fill="#FCEBEB" stroke="#F09595" stroke-width="1.5"/>
+<text x="587" y="988" text-anchor="middle" font-size="11" font-weight="500" fill="#501313" font-family="Arial,sans-serif">Step 4: Execute</text>
+<text x="587" y="1004" text-anchor="middle" font-size="10" fill="#A32D2D" font-family="Arial,sans-serif">tools/call</text>
+<text x="587" y="1020" text-anchor="middle" font-size="9" fill="#A32D2D" font-family="Arial,sans-serif">MCP re-validates</text>
+<text x="587" y="1034" text-anchor="middle" font-size="9" fill="#A32D2D" font-family="Arial,sans-serif">→ backend executes</text>
+<text x="587" y="1048" text-anchor="middle" font-size="9" fill="#A32D2D" font-family="Arial,sans-serif">→ audit log written</text>
+<text x="30" y="1076" font-size="12" font-weight="500" fill="#2C2C2A" font-family="Arial,sans-serif">Three standard authentication methods:</text>
+<rect x="30" y="1086" width="195" height="118" rx="8" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="1"/>
+<text x="127" y="1106" text-anchor="middle" font-size="11" font-weight="500" fill="#3C3489" font-family="Arial,sans-serif">Option A: API Key</text>
+<text x="46" y="1124" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">• Simplest to implement</text>
+<text x="46" y="1140" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">• Static key in request header</text>
+<text x="46" y="1156" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">• Good for: internal systems</text>
+<text x="46" y="1172" font-size="10" fill="#534AB7" font-family="Arial,sans-serif">• Risk: key leak = permanent access</text>
+<text x="46" y="1192" font-size="9" fill="#888780" font-family="Arial,sans-serif">Authorization: Bearer &lt;key&gt;</text>
+<rect x="238" y="1086" width="195" height="118" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="1"/>
+<text x="335" y="1106" text-anchor="middle" font-size="11" font-weight="500" fill="#085041" font-family="Arial,sans-serif">Option B: OAuth 2.0 (Recommended)</text>
+<text x="254" y="1124" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">• Industry standard (RFC 6749)</text>
+<text x="254" y="1140" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">• Client credentials flow</text>
+<text x="254" y="1156" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">• Good for: service-to-service</text>
+<text x="254" y="1172" font-size="10" fill="#0F6E56" font-family="Arial,sans-serif">• Token expires + can be revoked</text>
+<text x="254" y="1192" font-size="9" fill="#888780" font-family="Arial,sans-serif">client_id + secret → JWT token</text>
+<rect x="446" y="1086" width="205" height="118" rx="8" fill="#FAEEDA" stroke="#FAC775" stroke-width="1"/>
+<text x="548" y="1106" text-anchor="middle" font-size="11" font-weight="500" fill="#633806" font-family="Arial,sans-serif">Option C: mTLS Certificate</text>
+<text x="462" y="1124" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">• Highest security</text>
+<text x="462" y="1140" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">• Mutual certificate verification</text>
+<text x="462" y="1156" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">• Good for: finance / healthcare</text>
+<text x="462" y="1172" font-size="10" fill="#854F0B" font-family="Arial,sans-serif">• Complexity: cert lifecycle mgmt</text>
+<text x="462" y="1192" font-size="9" fill="#888780" font-family="Arial,sans-serif">client cert + server cert (both verify)</text>
+<rect x="30" y="1216" width="620" height="178" rx="8" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+<text x="50" y="1237" font-size="12" font-weight="500" fill="#2C2C2A" font-family="Arial,sans-serif">Authentication vs Authorization — one-line difference:</text>
+<text x="50" y="1257" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Authentication (AuthN) = Who are you? → Prove identity via key / certificate / token</text>
+<text x="50" y="1275" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">Authorization (AuthZ) = What can you do? → Enforce via scopes / roles / permission tables</text>
+<line x1="50" y1="1288" x2="630" y2="1288" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="50" y="1307" font-size="11" font-weight="500" fill="#2C2C2A" font-family="Arial,sans-serif">Industry standards underpinning this design:</text>
+<text x="50" y="1325" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">• MCP Protocol (Anthropic 2024) — defines initialize / tools/list / tools/call message format</text>
+<text x="50" y="1343" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">• OAuth 2.0 / OIDC (RFC 6749/7519) — vendor authentication; supported by Azure AD, Okta, Auth0</text>
+<text x="50" y="1361" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">• Principle of Least Privilege — every agent/MCP holds only the minimum permissions needed</text>
+<text x="50" y="1379" font-size="11" fill="#2C2C2A" font-family="Arial,sans-serif">• Zero Trust Architecture (NIST SP 800-207) — verify every call, never trust by network location alone</text>
+</svg>
