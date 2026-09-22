@@ -12,11 +12,7 @@
 
 InvestSim 起初只是能展示「今日 AI 选股」的仪表盘。现在它是一套小而确定的纸面交易引擎。
 
-线上信号来自 Fly.io 上的 Invest AI：
-
-```text
-https://xingai-invest-ai-api.fly.dev
-```
+线上信号来自 Fly.io 上的 Invest AI（`<INVEST_API_BASE_URL>`）。
 
 应用读取：
 

@@ -156,7 +156,7 @@ Anonymous users get limited live AI runs.
 Signed-in Gmail / @xingai.app users bypass the live-run limit.
 ```
 
-The frontend and API pass identity through headers such as `X-User-Email` after session resolution. Cached topic reads stay free either way.
+The frontend resolves the session on the server and passes a verified identity to the API; the API must not trust identity it cannot verify. Cached topic reads stay free either way.
 
 ## Common Failure Modes
 

@@ -1,0 +1,7 @@
+# Exceptions for scripts/check-public-safety.mjs. One per line:
+#   exact text                 → allowed anywhere
+#   path/to/file.md:exact text → allowed only in that file
+# Every entry needs a reason. Review this list when you add to it.
+
+radar@xingai.app          # public From address on the Opportunity Radar newsletter; every subscriber sees it; not used for auth
+onboarding@resend.dev     # Resend's documented shared test sender, not ours

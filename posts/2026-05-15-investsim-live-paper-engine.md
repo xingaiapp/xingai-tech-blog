@@ -11,11 +11,7 @@
 
 InvestSim started as a dashboard that could show a daily AI pick. Today it became a small, deterministic paper-trading engine.
 
-The live source is Invest AI on Fly.io:
-
-```text
-https://xingai-invest-ai-api.fly.dev
-```
+The live source is the Invest AI API on Fly.io (`<INVEST_API_BASE_URL>`).
 
 The app now reads:
 

@@ -23,7 +23,7 @@ One Docker image starts both processes via `scripts/fly-start.sh`. GitHub Action
 Vercel sets:
 
 ```txt
-RESEARCH_API_URL=https://xingai-research-ai-api.fly.dev
+RESEARCH_API_URL=<RESEARCH_API_BASE_URL>
 NEXT_PUBLIC_SITE_URL=https://research.xingai.app
 ```
 

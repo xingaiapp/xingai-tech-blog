@@ -7,6 +7,8 @@
   },
   "scripts": {
     "dev": "next dev --port 3010",
+    "check:public": "node scripts/check-public-safety.mjs",
+    "prebuild": "npm run check:public",
     "build": "next build",
     "start": "next start --port 3010",
     "lint": "tsc --noEmit"

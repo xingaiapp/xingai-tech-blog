@@ -18,7 +18,7 @@ Only a **cache miss** that triggers worker inference burns quota. Hit `v2:resear
 
 ## Identity
 
-Next.js forwards `X-Client-Id` (UUID in `localStorage`) to Fly. Future Gmail sign-in sends `X-User-Email` for unlimited tier (ADR-005).
+Next.js forwards an anonymous browser id (a UUID in `localStorage`) to the backend. Signed-in users get a higher tier, and that identity must come from a verified server-side session, never from a header the browser can set (ADR-005).
 
 ## Storage
 

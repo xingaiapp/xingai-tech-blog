@@ -25,6 +25,22 @@ Use placeholders: `admin@your-domain`, `<FLY_SECRET>`, `<comma-separated allowli
 | **Shipped product behavior** | Features users already see in the UI |
 | **Generic runbooks** | OAuth setup with placeholder client id/secret |
 
+## Automated gate (always on)
+
+`scripts/check-public-safety.mjs` enforces the table above. It runs:
+
+| When | How | Effect of a finding |
+|------|-----|---------------------|
+| Every build, including Vercel | `prebuild` → `npm run check:public` | Build fails, nothing deploys |
+| Every push and PR | `.github/workflows/public-safety.yml` | Check turns red |
+| By hand | `npm run check:public` | Lists file:line, rule, and why |
+
+It catches credentials (OpenAI, Stripe, JWT, AWS, GitHub, Resend, Google, private keys), secret env vars with real values, identity/tier request headers (`X-…-Email`, `X-…-Admin`, `X-Paid-Token` …), backend hostnames (`*.fly.dev`, `*.internal`, private IPs) and real email addresses.
+
+False positives go in `.public-safety-allow`, one per line, **each with a reason**. Do not allowlist something to make the build pass if the text would help someone abuse production — rewrite it instead.
+
+The gate reduces mistakes; it does not replace the questions below.
+
 ## Pre-push review (agent + human)
 
 1. Search the diff for: `@xingai.app`, `bypass`, `secret`, `localStorage`, `X-`, `V2_`, `sk-`, `password`, `token=`, real phone numbers.

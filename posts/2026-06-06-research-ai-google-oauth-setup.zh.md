@@ -156,7 +156,7 @@ AUTH_GOOGLE_CLIENT_SECRET
 Gmail / @xingai.app 登录用户跳过实时次数限制。
 ```
 
-前端和 API 会在解析 session 后，通过类似 `X-User-Email` 的 header 传递身份。缓存命中的主题读取不受登录影响。
+前端在服务端解析 session 后，把验证过的身份传给 API；API 不能信任它无法验证的身份。缓存命中的主题读取不受登录影响。
 
 ## 常见失败
 

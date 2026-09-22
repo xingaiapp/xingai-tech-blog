@@ -1,0 +1,17 @@
+name: public-safety
+
+# This repo is public. Block pushes and PRs that add credentials, auth-trust
+# headers, internal hostnames or private emails (docs/PUBLIC-SECURITY.md).
+on:
+  push:
+  pull_request:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/check-public-safety.mjs

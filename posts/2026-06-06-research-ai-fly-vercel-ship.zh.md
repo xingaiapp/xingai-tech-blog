@@ -19,7 +19,7 @@ Research AI 沿用 Invest AI 部署形态：
 ## 前端配置
 
 ```txt
-RESEARCH_API_URL=https://xingai-research-ai-api.fly.dev
+RESEARCH_API_URL=<RESEARCH_API_BASE_URL>
 ```
 
 ## 运维

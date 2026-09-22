@@ -16,7 +16,7 @@
 
 ## 身份与存储
 
-Next 转发 `X-Client-Id`；未来 Gmail 登录走 `X-User-Email` 不限次。限额写在 `usage_limits.db`，与 `research.db` 分开，避免写锁争抢。
+Next 把匿名浏览器 ID 转发给后端；登录用户享有更高额度，但这个身份必须来自服务端验证过的会话，不能来自浏览器可以自己设置的请求头。限额写在 `usage_limits.db`，与 `research.db` 分开，避免写锁争抢。
 
 ## 触顶体验
 
