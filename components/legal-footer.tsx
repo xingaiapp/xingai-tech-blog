@@ -19,11 +19,18 @@ export function LegalFooter({ locale }: { locale: Locale }) {
             {link.label}
           </Link>
         ))}
-        <a href="https://xingai.app" className="text-muted-foreground hover:text-foreground">
-          xingai.app
-        </a>
       </nav>
       <p className="mt-3 text-xs text-muted-foreground">
+        Part of{" "}
+        <a href="https://xingai.app/" className="font-medium text-foreground underline underline-offset-4">
+          XingAI
+        </a>{" "}
+        — AI decision systems for everyday life ·{" "}
+        <a href="https://xingai.app/apps" className="underline-offset-4 hover:underline hover:text-foreground">
+          All apps
+        </a>
+      </p>
+      <p className="mt-2 text-xs text-muted-foreground">
         © {new Date().getFullYear()} XingAI. {m.legal.footerNote}
       </p>
     </footer>
