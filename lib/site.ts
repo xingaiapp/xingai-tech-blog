@@ -1,7 +1,7 @@
 export const LOCALES = ["en", "zh", "ko"] as const;
 export type Locale = (typeof LOCALES)[number];
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://blog.xingai.app";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://blog.xingai.app";
 export const SITE_NAME = "XingAI Tech Blog";
 export const GITHUB_REPO = "https://github.com/xingaiapp/xingai-tech-blog";
 export const XINGAI_HOME = "https://xingai.app";
