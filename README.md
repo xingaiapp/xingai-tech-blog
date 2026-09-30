@@ -29,6 +29,7 @@ Hero assets: `public/brand/hero-bg-light-visual.png` + `public/brand/hero-bg-vis
 
 | Date | Title | Project | Tags |
 |------|-------|---------|------|
+| 2026-09-29 | [Research Plane vs Decision Plane (ADR-055)](posts/2026-09-29-research-decision-plane-evidence-contract.md) · [中文](posts/2026-09-29-research-decision-plane-evidence-contract.zh.md) | Invest AI | `invest-ai` `evidence` `adr` `cqrs` `agentic-ai` `governance` |
 | 2026-09-20 | [The Archive Was Already Written. It Just Was Not a Site.](posts/2026-09-20-tech-blog-static-site-from-markdown.md) · [中文](posts/2026-09-20-tech-blog-static-site-from-markdown.zh.md) | XingAI Tech Blog | `tech-blog` `nextjs` `seo` `aeo` `i18n` `vercel` |
 | 2026-08-05 | [Three Repos, One Paper-to-Draft Loop](posts/2026-08-05-three-repos-one-paper-to-draft-loop.md) · [中文](posts/2026-08-05-three-repos-one-paper-to-draft-loop.zh.md) | Invest AI + InvestSim + Robinhood MCP | `invest-ai` `investsim` `mcp` `robinhood` `paper-trading` `adr` `worker-cache` |
 | 2026-08-05 | [Today Intelligence and the Report Surfaces That Stay Inside Invest AI](posts/2026-08-05-invest-ai-today-intelligence-report-surfaces.md) · [中文](posts/2026-08-05-invest-ai-today-intelligence-report-surfaces.zh.md) | Invest AI | `invest-ai` `reporting` `worker` `cache` `adr` `intelligence` |
