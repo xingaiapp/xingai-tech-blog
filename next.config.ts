@@ -26,6 +26,16 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    // B3: short slug was never a blog post — lab lives in enterprise-ai-design.
+    const lab =
+      "https://github.com/xingaiapp/xingai-enterprise-ai-design/blob/main/guides/2026-07-12-mcp-oauth-pkce-lab.md";
+    return [
+      { source: "/mcp-oauth-pkce-lab", destination: lab, permanent: true },
+      { source: "/posts/mcp-oauth-pkce-lab", destination: lab, permanent: true },
+      { source: "/:locale(en|zh|ko)/mcp-oauth-pkce-lab", destination: lab, permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

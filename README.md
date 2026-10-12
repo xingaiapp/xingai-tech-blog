@@ -1,6 +1,6 @@
 # XingAI Tech Blog
 
-**Current site: 0.1.1 (2026-09-25)** — footer “Part of XingAI” + All apps backlinks; Bing IndexNow key + `scripts/submit-indexnow.py` ready for when `blog.xingai.app` goes live. **`blog.xingai.app` is not live yet** (needs Vercel + DNS).
+**Current site: 0.1.2 (2026-10-12)** — `/mcp-oauth-pkce-lab` (and locale variants) 301 to the enterprise-ai-design PKCE lab on GitHub (never a blog post). Footer XingAI links + IndexNow scripts remain.
 
 Technical deep dives, architecture decisions, and engineering notes from the [XingAI](https://xingai.app) team.
 
