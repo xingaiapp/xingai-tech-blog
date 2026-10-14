@@ -34,6 +34,9 @@ const nextConfig: NextConfig = {
       { source: "/mcp-oauth-pkce-lab", destination: lab, permanent: true },
       { source: "/posts/mcp-oauth-pkce-lab", destination: lab, permanent: true },
       { source: "/:locale(en|zh|ko)/mcp-oauth-pkce-lab", destination: lab, permanent: true },
+      // Google crawled the dated slug under /posts (404 in GSC 2026-10-08).
+      { source: "/posts/2026-07-12-mcp-oauth-pkce-lab", destination: lab, permanent: true },
+      { source: "/:locale(en|zh|ko)/posts/2026-07-12-mcp-oauth-pkce-lab", destination: lab, permanent: true },
     ];
   },
 };
