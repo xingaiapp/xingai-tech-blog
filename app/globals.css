@@ -212,3 +212,9 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+/* Mermaid sizes label boxes from measured text; the site font renders ~2% wider, which clipped the
+   last pixels of flowchart labels. Let the text overflow its box instead of cutting it off. */
+.mermaid-wrap svg foreignObject {
+  overflow: visible;
+}

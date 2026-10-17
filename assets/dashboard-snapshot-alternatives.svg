@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-labelledby="t d">
+  <title id="t">Cost of one read of the dashboard (ms, p50, lower is better)</title>
+  <desc id="d">Same 7.46 MB fixture · 60 runs each · local. Old: read all + parse: 58.7 ms; F. orjson: 26.6 ms; C. json_extract: 15.1 ms; A. Snapshot (chosen): 2.1 ms; B. Slim row (needs worker): 0.8 ms.</desc>
+  <rect width="1200" height="560" rx="28" fill="#f8fafc"/>
+  <rect x="1" y="1" width="1198" height="558" rx="27" fill="none" stroke="#cbd5e1" stroke-width="2"/>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', sans-serif">
+  <text x="60" y="84" font-size="38" font-weight="700" fill="#0f172a">Cost of one read of the dashboard (ms, p50, lower is better)</text>
+  <text x="60" y="124" font-size="22" fill="#475569">Same 7.46 MB fixture · 60 runs each · local</text>
+  <text x="314" y="200" font-size="24" fill="#0f172a" text-anchor="end">Old: read all + parse</text>
+  <rect x="330" y="170" width="640.0" height="44" rx="4" fill="#dc2626"/>
+  <text x="984.0" y="202" font-size="26" font-weight="700" fill="#0f172a">58.7 ms</text>
+  <text x="314" y="268" font-size="24" fill="#0f172a" text-anchor="end">F. orjson</text>
+  <rect x="330" y="238" width="290.0" height="44" rx="4" fill="#f59e0b"/>
+  <text x="634.0" y="270" font-size="26" font-weight="700" fill="#0f172a">26.6 ms</text>
+  <text x="314" y="336" font-size="24" fill="#0f172a" text-anchor="end">C. json_extract</text>
+  <rect x="330" y="306" width="164.6" height="44" rx="4" fill="#f59e0b"/>
+  <text x="508.6" y="338" font-size="26" font-weight="700" fill="#0f172a">15.1 ms</text>
+  <text x="314" y="404" font-size="24" fill="#0f172a" text-anchor="end">A. Snapshot (chosen)</text>
+  <rect x="330" y="374" width="22.9" height="44" rx="4" fill="#16a34a"/>
+  <text x="366.9" y="406" font-size="26" font-weight="700" fill="#0f172a">2.1 ms</text>
+  <text x="314" y="472" font-size="24" fill="#0f172a" text-anchor="end">B. Slim row (needs worker)</text>
+  <rect x="330" y="442" width="8.7" height="44" rx="4" fill="#2563eb"/>
+  <text x="352.7" y="474" font-size="26" font-weight="700" fill="#0f172a">0.8 ms</text>
+  <text x="60" y="538" font-size="21" fill="#334155">A needs no worker change and can be reverted; B is fastest but needs a worker and schema change</text>
+  </g>
+</svg>

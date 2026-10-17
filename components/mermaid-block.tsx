@@ -10,7 +10,10 @@ export function MermaidBlock({ chart }: { chart: string }) {
     if (!node) return;
     let cancelled = false;
 
-    import("mermaid").then((mod) => {
+    // Mermaid measures label text when it renders. Wait for web fonts first, otherwise labels are
+    // measured in a fallback font and clipped once the real font is applied.
+    const fontsReady = document.fonts?.ready ?? Promise.resolve();
+    Promise.all([import("mermaid"), fontsReady]).then(([mod]) => {
       if (cancelled) return;
       const mermaid = mod.default;
       const dark = document.documentElement.classList.contains("dark");
