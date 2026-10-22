@@ -12,3 +12,4 @@ social/
 .idea/
 .vscode/
 *.swp
+*.tsbuildinfo
