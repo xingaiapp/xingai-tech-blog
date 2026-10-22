@@ -37,6 +37,11 @@ const nextConfig: NextConfig = {
       // Google crawled the dated slug under /posts (404 in GSC 2026-10-08).
       { source: "/posts/2026-07-12-mcp-oauth-pkce-lab", destination: lab, permanent: true },
       { source: "/:locale(en|zh|ko)/posts/2026-07-12-mcp-oauth-pkce-lab", destination: lab, permanent: true },
+      // Legacy numbered slug (GSC 404, crawled 2026-10-12): the MCP gateway/architecture topic
+      // now lives in the 2026-06-03 architecture post (EN + zh; ko falls back to EN).
+      { source: "/posts/001-mcp-gateway-proxy", destination: "/posts/2026-06-03-mcp-architecture-best-practices", permanent: true },
+      { source: "/zh/posts/001-mcp-gateway-proxy", destination: "/zh/posts/2026-06-03-mcp-architecture-best-practices", permanent: true },
+      { source: "/ko/posts/001-mcp-gateway-proxy", destination: "/posts/2026-06-03-mcp-architecture-best-practices", permanent: true },
     ];
   },
 };
