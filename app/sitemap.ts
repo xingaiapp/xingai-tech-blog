@@ -13,13 +13,21 @@ const SITEMAP_LOCALES: Locale[] = LOCALES.filter((l) => l !== "ko");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = ["/", "/posts", "/legal/privacy", "/legal/terms", "/legal/disclaimer"];
-  const postPaths = listPosts().map((p) => `/posts/${p.slug}`);
-  const paths = [...staticPaths, ...postPaths];
+  const posts = listPosts();
+  const latestPostDate = posts.reduce((max, p) => (p.date > max ? p.date : max), posts[0]?.date ?? "");
+  // lastModified = real editorial dates, never new Date(): stamping every
+  // URL as changed on every fetch teaches Google to distrust the sitemap
+  // (same fix the main site shipped in its PR #39). Posts carry their true
+  // publish date (from listPosts); listing/static pages use the newest post.
+  const entries: { path: string; lastModified: string }[] = [
+    ...staticPaths.map((path) => ({ path, lastModified: latestPostDate })),
+    ...posts.map((p) => ({ path: `/posts/${p.slug}`, lastModified: p.date })),
+  ];
 
   return SITEMAP_LOCALES.flatMap((locale) =>
-    paths.map((path) => ({
+    entries.map(({ path, lastModified }) => ({
       url: publicUrl(locale, path),
-      lastModified: new Date(),
+      lastModified: new Date(`${lastModified}T00:00:00Z`),
       changeFrequency: path.startsWith("/posts/") ? ("monthly" as const) : ("weekly" as const),
       priority: path === "/" ? 1 : path.startsWith("/posts/") ? 0.8 : 0.5,
     })),
