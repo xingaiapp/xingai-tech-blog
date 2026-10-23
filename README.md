@@ -1,5 +1,7 @@
 # XingAI Tech Blog
 
+**Live: [blog.xingai.app](https://blog.xingai.app)**
+
 **Current site: 0.1.2 (2026-10-12)** — `/mcp-oauth-pkce-lab` (and locale variants) 301 to the enterprise-ai-design PKCE lab on GitHub (never a blog post). Footer XingAI links + IndexNow scripts remain.
 
 Technical deep dives, architecture decisions, and engineering notes from the [XingAI](https://xingai.app) team.
